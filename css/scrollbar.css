@@ -1,0 +1,20 @@
+/* header-scrollbar */
+.header__list--select .simplebar-track.simplebar-vertical {
+    width: 3px;
+    background-color: var(--ellipse-16-color);
+}
+
+.header__list--select .simplebar-track {
+    right: -19px;
+}
+
+.header__list--select .simplebar-track.simplebar-vertical .simplebar-scrollbar::before {
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: var(--ellipse-20-color);
+    border-radius: 7px;
+    transition: opacity 0.2s linear 0.5s;
+    opacity: 1;
+}
