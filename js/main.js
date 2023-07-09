@@ -171,3 +171,46 @@ const projectsSwiper = new Swiper('.projects__swiper', {
     prevEl: '.projects__swiper-button-prev',
   },
 });
+
+
+// footer-contact-form---------------------------------------------------------------------------------------------------------------
+var selectorFormFooterTel = document.querySelector("input[type='tel']");
+var selectorFormFooterName = document.querySelector("input[name='name']");
+var imFooter = new Inputmask("+7 (999)-999-99-99");
+imFooter.mask(selectorFormFooterTel);
+
+new JustValidate('.footer__form', {
+  rules: {
+    name: {
+      required: true,
+      minLength: 2,
+      maxLength: 20,
+      function: function (nameValue) {
+        const nameFooter = selectorFormFooterName.value;
+        return /^[A-Za-zА-Яа-я]+$/.test(nameFooter);
+      }
+    },
+
+    tel: {
+      required: true,
+      function: function (name, value) {
+        const phoneFooter = selectorFormFooterTel.inputmask.unmaskedvalue();
+        return Number(phoneFooter) && phoneFooter.length === 10;
+      }
+    },
+  },
+
+  messages: {
+    name: {
+      required: 'Как вас зовут?',
+      minLength: 'Имя должно содержать больше 2 букв',
+      maxLength: 'Имя должно содержать не более 20 букв',
+      function: 'Недопустимый формат'
+    },
+
+    tel: {
+      required: 'Укажите ваш телефон',
+      function: 'Введите 10 цифр',
+    },
+  },
+});

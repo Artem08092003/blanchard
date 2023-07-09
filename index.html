@@ -1358,76 +1358,76 @@
           <div class="swiper projects__swiper">
             <ul class="list--reset list swiper-wrapper projects__swiper--wrapper projects__list flex">
               <li class="swiper-slide projects__swiper--slide projects__item">
-                <div class="projects__item--block flex">
-                  <a href="#" class="projects__link--list">
+                <a href="#" class="projects__item--link flex">
+                  <div class="projects__item--block">
                     <img src="img/projects-1.png" alt="логотип компания партнёра"
-                      class="projects__img--logo--link--list">
-                  </a>
-                </div>
+                      class="projects__item--img--logo--link">
+                  </div>
+                </a>
               </li>
               <li class="swiper-slide projects__swiper--slide projects__item">
-                <div class="projects__item--block flex">
-                  <a href="#" class="projects__link--list">
+                <a href="#" class="projects__item--link flex">
+                  <div class="projects__item--block">
                     <img src="img/projects-2.png" alt="логотип компания партнёра"
-                      class="projects__img--logo--link--list">
-                  </a>
-                </div>
+                      class="projects__item--img--logo--link">
+                  </div>
+                </a>
               </li>
               <li class="swiper-slide projects__swiper--slide projects__item">
-                <div class="projects__item--block flex">
-                  <a href="#" class="projects__link--list">
+                <a href="#" class="projects__item--link flex">
+                  <div class="projects__item--block">
                     <img src="img/projects-3.png" alt="логотип компания партнёра"
-                      class="projects__img--logo--link--list">
-                  </a>
-                </div>
+                      class="projects__item--img--logo--link">
+                  </div>
+                </a>
               </li>
               <li class="swiper-slide projects__swiper--slide projects__item">
-                <div class="projects__item--block flex">
-                  <a href="#" class="projects__link--list">
+                <a href="#" class="projects__item--link flex">
+                  <div class="projects__item--block">
                     <img src="img/projects-4.png" alt="логотип компания партнёра"
-                      class="projects__img--logo--link--list">
-                  </a>
-                </div>
+                      class="projects__item--img--logo--link">
+                  </div>
+                </a>
               </li>
               <li class="swiper-slide projects__swiper--slide projects__item">
-                <div class="projects__item--block flex">
-                  <a href="#" class="projects__link--list">
+                <a href="#" class="projects__item--link flex">
+                  <div class="projects__item--block">
                     <img src="img/projects-5.png" alt="логотип компания партнёра"
-                      class="projects__img--logo--link--list">
-                  </a>
-                </div>
+                      class="projects__item--img--logo--link">
+                  </div>
+                </a>
               </li>
               <li class="swiper-slide projects__swiper--slide projects__item">
-                <div class="projects__item--block flex">
-                  <a href="#" class="projects__link--list">
+                <a href="#" class="projects__item--link flex">
+                  <div class="projects__item--block">
                     <img src="img/projects-6.png" alt="логотип компания партнёра"
-                      class="projects__img--logo--link--list">
-                  </a>
-                </div>
+                      class="projects__item--img--logo--link">
+                  </div>
+                </a>
               </li>
               <li class="swiper-slide projects__swiper--slide projects__item">
-                <div class="projects__item--block flex">
-                  <a href="#" class="projects__link--list">
+                <a href="#" class="projects__item--link flex">
+                  <div class="projects__item--block">
                     <img src="img/projects-7.png" alt="логотип компания партнёра"
-                      class="projects__img--logo--link--list">
-                  </a>
-                </div>
+                      class="projects__item--img--logo--link">
+                  </div>
+                </a>
               </li>
               <li class="swiper-slide projects__swiper--slide projects__item">
-                <div class="projects__item--block flex">
-                  <a href="#" class="projects__link--list">
+                <a href="#" class="projects__item--link flex">
+                  <div class="projects__item--block">
                     <img src="img/projects-8.png" alt="логотип компания партнёра"
-                      class="projects__img--logo--link--list">
-                  </a>
-                </div>
+                      class="projects__item--img--logo--link">
+                  </div>
+                </a>
               </li>
               <li class="swiper-slide projects__swiper--slide projects__item">
-                <div class="projects__item--block flex">
-                  <a href="#" class="projects__link--list">
+                <a href="#" class="projects__item--link flex">
+                  <div class="projects__item--block">
                     <img src="img/projects-9.png" alt="логотип компания партнёра"
-                      class="projects__img--logo--link--list">
-                  </a>
-                </div>
+                      class="projects__item--img--logo--link">
+                  </div>
+                </a>
               </li>
             </ul>
           </div>
@@ -1438,27 +1438,33 @@
 
   <footer class="footer">
     <section class="footer__section--top">
-      <div class="container footer__container">
+      <div class="container footer__container flex">
         <address class="footer__address">
-          <h2 class="h3 footer__h3">
+          <h3 class="h3 footer__h3">
             Шоурум №4
-          </h2>
+          </h3>
           <span class="footer__address--span">
             Леонтьевский переулок, дом 5/1
           </span>
         </address>
-        <form action="https://jsonplaceholder.typicode.com/posts" method="post" class="footer__form">
-          <input class="footer__input" id="footerName" type="text" name="name" placeholder="Имя*" required>
-          <input class="footer__input" id="footerTel" type="tel" name="tel" placeholder="Телефон*" required>
+        <form action="https://jsonplaceholder.typicode.com/posts" method="post" class="footer__form flex">
+          <label for="name" class="footer__label">
+            <input class="footer__input" id="footerName" type="text" name="name" placeholder="Имя*" required
+              data-validate-field="name">
+          </label>
+          <label for="name" class="footer__label">
+            <input class="footer__input" id="footerTel" type="tel" name="tel" placeholder="Телефон*" required
+              data-validate-field="tel" data-validate-rules="phone">
+          </label>
           <button class="btn--reset btn footer__btn">
             Заказать обратный звонок
           </button>
         </form>
         <div class="footer__content--social--link">
-          <h2 class="h3 footer__h3">
+          <h3 class="h3 footer__h3--content--social-link">
             Связаться в один клик
-          </h2>
-          <div class="footer__social--link--container--top">
+          </h3>
+          <div class="footer__social--link--container--top flex">
             <a href="#" class="footer__social--link--top">
               <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
                 <g id="Whatsapp-Icon" clip-path="url(#clip0_191243_648)">
@@ -1533,6 +1539,8 @@
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 <script src="liblary/choices/choices.min.js"></script>
+<script src="liblary/form-contact/just-validate.min.js"></script>
+<script src="liblary/form-contact/inputmask.min.js"></script>
 <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
 <script src="liblary/accordion/accordion.min.js"></script>
 <script src="js/main.js"></script>

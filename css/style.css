@@ -756,7 +756,8 @@ time {
   display: block;
 }
 
-.events__span, .events__span ~ time {
+.events__span,
+.events__span~time {
   color: var(--ellipse-28-color);
   font-size: 12px;
   font-weight: 600;
@@ -796,7 +797,7 @@ time {
 
 /* projects */
 .projects__section {
-  padding-top: 80px;
+  padding: 80px 0;
 }
 
 .projects__h2 {
@@ -829,19 +830,20 @@ time {
   width: 450px;
 }
 
-.projects__item--block {
+.projects__item--link {
   align-items: center;
   justify-content: center;
   width: 99%;
   height: 150px;
   border: 1px solid var(--ellipse-25-color);
+  cursor: pointer;
 }
 
-.projects__link--list {
+.projects__item--block {
   display: block;
 }
 
-.projects__img--logo--link--list {
+.projects__item--img--logo--link {
   display: block;
   height: 100%;
   filter: grayscale(100%);
@@ -850,4 +852,98 @@ time {
 
 .projects__swiper--container {
   padding: 0 75px;
+}
+
+.projects__item--link:hover .projects__item--img--logo--link {
+  filter: none;
+  opacity: 1;
+}
+
+/* footer */
+.footer__section--top {
+  padding: 45px 0;
+  border: 1px solid var(--ellipse-25-color);
+}
+
+.footer__container {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__address {
+  font-style: normal;
+}
+
+.footer__h3 {
+  line-height: 32px;
+}
+
+.footer__address--span {
+  color: var(--ellipse-29-color);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+.footer__label {
+  position: relative;
+}
+
+.footer__input {
+  margin-right: 20px;
+  width: 270px;
+  min-height: 50px;
+  padding: 10px 25px;
+  border: 1px solid var(--ellipse-29-color);
+  border-radius: 100px;
+  background-color: transparent;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 200%;
+  cursor: pointer;
+}
+
+.footer__input::placeholder {
+  color: var(--ellipse-28-color);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 200%;
+}
+
+.footer__input.js-validate-error-field {
+  border: 1px solid var(--ellipse-22-color) !important;
+  color: var(--ellipse-22-color) !important;
+}
+
+.footer__form .js-validate-error-label {
+  position: absolute;
+  top: -18px;
+  left: 14px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: var(--ellipse-22-color) !important;
+}
+
+.footer__btn {
+  padding: 17px 35px;
+  border-radius: 100px;
+  border: 2px solid var(--ellipse-19-color);
+  color: var(--ellipse-19-color);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.footer__h3--content--social-link {
+  margin-bottom: 6px;
+}
+
+.footer__social--link--top {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+}
+
+.footer__social--link--top:not(:last-child) {
+  margin-right: 20px;
 }
