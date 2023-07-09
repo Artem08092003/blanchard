@@ -878,7 +878,7 @@ time {
   line-height: 32px;
 }
 
-.footer__address--span {
+.footer__address--link {
   color: var(--ellipse-29-color);
   font-size: 16px;
   font-weight: 400;
@@ -946,4 +946,9 @@ time {
 
 .footer__social--link--top:not(:last-child) {
   margin-right: 20px;
+}
+
+#myMap-1 {
+  width: 100%;
+  min-height: 700px;
 }

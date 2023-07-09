@@ -214,3 +214,46 @@ new JustValidate('.footer__form', {
     },
   },
 });
+
+
+// footer-map--------------------------------------------------------------------------------------------------------------------------------------------------
+
+// Функция ymaps.ready() будет вызвана, когда
+// загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+ymaps.ready(init);
+function init() {
+  // Создание карты.
+  var myMap = new ymaps.Map("mapLayer", {
+    // Координаты центра карты.
+    // Порядок по умолчанию: «широта, долгота».
+    // Чтобы не определять координаты центра карты вручную,
+    // воспользуйтесь инструментом Определение координат.
+    center: [55.758468, 37.601088],
+    // Уровень масштабирования. Допустимые значения:
+    // от 0 (весь мир) до 19.
+    zoom: 14,
+    behaviors: ['default']
+  });
+
+  // Создание геообъекта с типом точка (метка).
+  var myPlacemark = new ymaps.Placemark([55.758468, 37.601088], {}, {
+    iconLayout: 'default#image',
+    iconImageHref: 'img/location.svg',
+    iconImageSize: [30, 42],
+    iconImageOffset: [-3, -42]
+  });
+
+  // удаление обьекты на карте
+  myMap.controls.remove('searchControl');
+  myMap.controls.remove('trafficControl');
+  myMap.controls.remove('typeSelector');
+  myMap.controls.remove('fullscreenControl');
+  myMap.controls.remove('rulerControl');
+  myMap.controls.remove('scrollZoom');
+
+  // Запрет скроллинга карты с помощью мыши
+  myMap.behaviors.disable('scrollZoom');
+
+  // Размещение геообъекта на карте.
+  myMap.geoObjects.add(myPlacemark);
+}
