@@ -1,42 +1,33 @@
 /* footer-map */
-#myMap-1 {
-  position: relative;
-}
-
-#mapLayer {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+#myMap-1 [class*="ymaps-2"][class*="-ground-pane"] {
   filter: grayscale(100%);
 }
 
-#mapLayer .ymaps-2-1-79-controls__control {
+#myMap-1 .ymaps-2-1-79-controls__control {
   inset: 250px 10px auto auto !important;
   border-radius: 5px !important;
   box-shadow: 0 1px 2px 1px rgba(0,0,0,.15), 0 2px 5px -3px rgba(0,0,0,.15) !important;
   overflow: hidden !important;
 }
 
-#mapLayer .ymaps-2-1-79-zoom {
+#myMap-1 .ymaps-2-1-79-zoom {
   height: 0 !important;
 }
 
-#mapLayer .ymaps-2-1-79-float-button {
+#myMap-1 .ymaps-2-1-79-float-button {
   border-radius: 0 !important;
   box-shadow: none !important;
 }
 
-#mapLayer .ymaps-2-1-79-zoom__scale {
+#myMap-1 .ymaps-2-1-79-zoom__scale {
   display: none;
 }
 
-#mapLayer .ymaps-2-1-79-controls__toolbar_left {
+#myMap-1 .ymaps-2-1-79-controls__toolbar_left {
   float: right !important;
 }
 
-#mapLayer .ymaps-2-1-79-controls__control_toolbar {
+#myMap-1 .ymaps-2-1-79-controls__control_toolbar {
   margin: 0 !important;
   margin-right: 10px !important;
   margin-top: 310px !important;

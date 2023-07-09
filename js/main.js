@@ -223,7 +223,7 @@ new JustValidate('.footer__form', {
 ymaps.ready(init);
 function init() {
   // Создание карты.
-  var myMap = new ymaps.Map("mapLayer", {
+  var myMap = new ymaps.Map("myMap-1", {
     // Координаты центра карты.
     // Порядок по умолчанию: «широта, долгота».
     // Чтобы не определять координаты центра карты вручную,
