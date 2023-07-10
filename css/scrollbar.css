@@ -18,3 +18,7 @@
     transition: opacity 0.2s linear 0.5s;
     opacity: 1;
 }
+
+.header__list--select .simplebar-content-wrapper {
+  overflow: auto !important;
+}

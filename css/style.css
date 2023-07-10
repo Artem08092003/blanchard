@@ -952,3 +952,34 @@ time {
   width: 100%;
   min-height: 700px;
 }
+
+.footer__section--bottom {
+  padding: 48px 0;
+  background-color: var(--ellipse-16-color);
+}
+
+.footer__container {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__logo {
+  display: block;
+}
+
+.footer__logo img {
+  display: block;
+  height: 100%;
+}
+
+.footer__social--link--bottom {
+  display: inline-block;
+}
+
+.footer__social--link--bottom svg {
+  vertical-align: middle;
+}
+
+.footer__social--link--bottom:not(:last-child) {
+  margin-right: 20px;
+}
