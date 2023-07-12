@@ -56,9 +56,10 @@
   margin: 0;
   width: 30px;
   height: 30px;
+  border: 2px solid var(--ellipse-27-color);
   border-radius: 100%;
   background-color: var(--ellipse-27-color);
-  transition: background 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out, border 0.2s ease-in-out;
 }
 
 #gallerySwiper .gallery__subblock--arrows .swiper-button-next.focus-visible,
@@ -70,21 +71,22 @@
 #gallerySwiper .gallery__subblock--arrows .swiper-button-next:hover,
 #gallerySwiper .gallery__subblock--arrows .swiper-button-prev:hover {
   outline: none;
+  border: 2px solid var(--ellipse-19-color);
   background-color: var(--ellipse-19-color);
 }
 
 #gallerySwiper .gallery__subblock--arrows .swiper-button-next:active,
 #gallerySwiper .gallery__subblock--arrows .swiper-button-prev:active {
-  outline-offset: -2px;
-  outline: 2px solid var(--ellipse-16-color);
+  outline: none;
+  border: 2px solid var(--ellipse-16-color);
   background-color: var(--ellipse-18-color);
 }
 
 #gallerySwiper .gallery__subblock--arrows .swiper-button-next::after {
   content: '';
   position: absolute;
-  left: 11px;
-  top: 12px;
+  left: 10px;
+  top: 11px;
   bottom: 0;
   right: 0;
   width: 6px;
@@ -98,8 +100,8 @@
 #gallerySwiper .gallery__subblock--arrows .swiper-button-prev::after {
   content: '';
   position: absolute;
-  left: 13px;
-  top: 12px;
+  left: 12px;
+  top: 11px;
   bottom: 0;
   right: 0;
   width: 6px;

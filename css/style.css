@@ -517,14 +517,15 @@ time {
 }
 
 .hero__btn {
-  max-width: 315px;
+  max-width: 320px;
   padding: 17px 35px;
   border-radius: 100px;
+  border: 2px solid var(--ellipse-19-color);
   background-color: var(--ellipse-19-color);
   font-size: 18px;
   font-weight: 700;
   color: var(--ellipse-20-color);
-  transition: background 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out, border 0.2s ease-in-out;
 }
 
 .hero__btn.focus-visible {
@@ -533,13 +534,13 @@ time {
 }
 
 .hero__btn:hover {
-  outline-offset: -2px;
-  outline: 2px solid var(--ellipse-30-color);
+  outline: none;
+  border: 2px solid var(--ellipse-30-color);
 }
 
 .hero__btn:active {
-  outline-offset: -2px;
-  outline: 2px solid var(--ellipse-30-color);
+  outline: none;
+  border: 2px solid var(--ellipse-30-color);
   background-color: var(--ellipse-18-color);
 }
 
@@ -568,6 +569,7 @@ time {
 /* gallery */
 .gallery__section {
   padding: 80px 0;
+  background-color: var(--ellipse-29-color);
   background-image: url(../img/gallery-background.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -767,9 +769,8 @@ time {
 .gallery__link--pictures img {
   display: block;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
-  background-color: var(--ellipse-29-color);
   transition: opacity 0.2s;
 }
 
@@ -779,6 +780,10 @@ time {
 
 .gallery__link--pictures:active img {
   opacity: 0.5;
+}
+
+.gallery__link--pictures img[alt] {
+  color: var(--ellipse-20-color);
 }
 
 
