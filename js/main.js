@@ -170,6 +170,10 @@ const projectsSwiper = new Swiper('.projects__swiper', {
     nextEl: '.projects__swiper-button-next',
     prevEl: '.projects__swiper-button-prev',
   },
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
 });
 
 

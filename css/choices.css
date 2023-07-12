@@ -1,34 +1,118 @@
 /* gallery-choices-select------------------- */
+.gallery__label--select .choices {
+  z-index: 50;
+  transition: background 0.2s;
+}
+
+.gallery__label--select .choices.focus-visible,
+.gallery__label--select .choices:hover {
+  background: rgba(255, 255, 255, 0.20);
+}
+
 .gallery__label--select .choices .choices__inner {
-    padding: 3px 16px;
-    background-color: transparent;
-    border-radius: 6px;
-    border: 2px solid var(--ellipse-20-color);
+  padding: 3px 16px;
+  background-color: transparent;
+  border-radius: 6px;
+  border: 2px solid var(--ellipse-20-color);
 }
 
 .gallery__label--select .choices .choices__inner .choices__list {
-    padding: 0;
+  padding: 0;
 }
 
 .gallery__label--select .choices .choices__inner .choices__list .choices__item {
-    color: var(--ellipse-20-color);
-    font-size: 16px;
-    line-height: 200%;
+  color: var(--ellipse-20-color);
+  font-size: 16px;
+  line-height: 200%;
+}
+
+.gallery__label--select .choices__list--dropdown .choices__item--selectable.is-highlighted,
+.gallery__label--select .choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
+  background-color: inherit;
+}
+
+.gallery__label--select .choices__list--dropdown,
+.gallery__label--select .choices__list[aria-expanded] {
+  top: 97%;
+  z-index: -1;
+  border: none;
+  background-color: transparent;
+  overflow: initial;
+}
+
+.gallery__label--select .choices__list--dropdown .choices__list,
+.gallery__label--select .choices__list[aria-expanded] .choices__list {
+  overflow: initial;
+}
+
+.gallery__label--select .choices__list--dropdown .choices__item,
+.gallery__label--select .choices__list[aria-expanded] .choices__item {
+  padding: 3px 16px;
+  border-left: 2px solid var(--ellipse-28-color);
+  border-right: 2px solid var(--ellipse-28-color);
+  color: var(--ellipse-28-color);
+  font-size: 16px;
+  line-height: 200%;
+  transition: background 0.2s, color 0.2s, transform 0.2s ease-in-out;
+}
+
+.gallery__label--select .choices__list--dropdown .choices__item--selectable.is-highlighted,
+.gallery__label--select .choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
+  color: var(--ellipse-20-color);
+  background: rgba(255, 255, 255, 0.20);
+}
+
+.gallery__label--select .choices__list--dropdown .choices__item:hover,
+.gallery__label--select .choices__list[aria-expanded] .choices__item:hover {
+  color: var(--ellipse-20-color);
+  background: rgba(255, 255, 255, 0.20);
+  transform: scaleX(1.1);
+}
+
+.gallery__label--select .choices__list--dropdown .choices__item:hover:not(:last-child),
+.gallery__label--select .choices__list[aria-expanded] .choices__item:hover:not(:last-child),
+.gallery__label--select .choices__list--dropdown .choices__item:hover:not(:first-child),
+.gallery__label--select .choices__list[aria-expanded] .choices__item:hover:not(:first-child) {
+  outline: 2px solid var(--ellipse-28-color);
+  border: none;
+}
+
+.gallery__label--select .choices__list--dropdown .choices__item:hover:first-child,
+.gallery__label--select .choices__list[aria-expanded] .choices__item:hover:first-child {
+  outline-offset: -2px;
+}
+
+.gallery__label--select .choices__list--dropdown .choices__item:last-child,
+.gallery__label--select .choices__list[aria-expanded] .choices__item:last-child {
+  border-radius: 0px 0px 6px 6px;
+  border: 2px solid var(--ellipse-28-color);
+}
+
+.gallery__label--select .choices__list--dropdown .choices__item:first-child,
+.gallery__label--select .choices__list[aria-expanded] .choices__item:first-child {
+  border-radius: 6px 6px 0px 0px;
+  border: 2px solid var(--ellipse-28-color);
+}
+
+.gallery__label--select .choices__list--dropdown .choices__item--selectable.is-highlighted::after,
+.gallery__label--select .choices__list[aria-expanded] .choices__item--selectable.is-highlighted::after {
+  display: none;
 }
 
 .gallery__label--select .choices[data-type*=select-one]::after {
-    margin-top: -5.5px;
-    border-style: none;
-    border-color: transparent;
-    border-right: 2px solid var(--ellipse-20-color);
-    border-bottom: 2px solid var(--ellipse-20-color);
-    height: 9px;
-    width: 9px;
-    right: 15.5px;
-    rotate: 45deg;
+  margin-top: -5.5px;
+  border-style: none;
+  border-color: transparent;
+  border-right: 2px solid var(--ellipse-20-color);
+  border-bottom: 2px solid var(--ellipse-20-color);
+  height: 9px;
+  width: 9px;
+  right: 15.5px;
+  transform: rotate(45deg);
+  transition: transform 0.3s;
 }
 
 .gallery__label--select .choices[data-type*=select-one].is-open::after {
-    margin-top: -2.5px;
-    rotate: 225deg;
+  margin-top: -2.5px;
+  transform: rotate(225deg);
 }
