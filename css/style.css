@@ -765,7 +765,6 @@ time {
   opacity: 1;
 }
 
-
 .gallery__link--pictures img {
   display: block;
   height: 100%;
@@ -845,6 +844,25 @@ time {
   color: var(--ellipse-19-color);
   font-size: 16px;
   font-weight: 600;
+  transition: background 0.2s, color 0.2s;
+}
+
+.catalog__link--article.focus-visible {
+  outline: none;
+  background-color: var(--ellipse-19-color);
+  color: var(--ellipse-20-color);
+}
+
+.catalog__link--article:hover {
+  outline: none;
+  background-color: transparent;
+  color: var(--ellipse-18-color);
+}
+
+.catalog__link--article:active {
+  outline: none;
+  background-color: transparent;
+  color: var(--ellipse-29-color);
 }
 
 .catalog__list {
@@ -860,10 +878,43 @@ time {
   justify-content: space-between;
   padding: 32px 0;
   border-top: 1px solid var(--ellipse-25-color);
+  border-bottom: 1px solid var(--ellipse-25-color);
 }
 
-.catalog__accordion--content:last-child .catalog__accordion--trigger {
-  border-bottom: 1px solid var(--ellipse-25-color);
+.catalog__btn--list {
+  transition: border-color 0.2s;
+}
+
+.catalog__btn--list.focus-visible {
+  outline: none;
+}
+
+.catalog__btn--list:hover {
+  border-color: var(--ellipse-19-color);
+}
+
+.catalog__btn--list:active {
+  border-color: var(--ellipse-18-color);
+}
+
+.catalog__btn--list .catalog__h3--list {
+  transition: color 0.2s, background 0.2s;
+}
+
+.catalog__btn--list.focus-visible .catalog__h3--list {
+  outline: none;
+  color: var(--ellipse-20-color);
+  background-color: var(--ellipse-19-color);
+}
+
+.catalog__btn--list:hover .catalog__h3--list {
+  color: var(--ellipse-19-color);
+  background-color: transparent;
+}
+
+.catalog__btn--list:active .catalog__h3--list {
+  color: var(--ellipse-18-color);
+  background-color: transparent;
 }
 
 .catalog__h3--list {
@@ -874,12 +925,38 @@ time {
   vertical-align: middle;
 }
 
-.catalog__accordion--content .catalog__svg--container--list {
-  transition: transform 0.3s ease-in-out;
+.catalog__btn--list .catalog__svg--container--list svg {
+  outline: none;
 }
 
-.catalog__accordion--active:not(:last-child) .catalog__accordion--trigger {
-  border-bottom: 1px solid var(--ellipse-25-color);
+.catalog__btn--list:active .catalog__svg--container--list svg {
+  outline: none;
+  border-radius: 100%;
+  border: 2px solid var(--ellipse-19-color);
+}
+
+.catalog__svg--container--list svg path {
+  fill: var(--ellipse-26-color);
+}
+
+.catalog__btn--list .catalog__svg--container--list svg path {
+  transition: fill 0.2s;
+}
+
+.catalog__btn--list.focus-visible .catalog__svg--container--list svg path {
+  fill: var(--ellipse-30-color);
+}
+
+.catalog__btn--list:hover .catalog__svg--container--list svg path {
+  fill: var(--ellipse-30-color);
+}
+
+.catalog__btn--list:active .catalog__svg--container--list svg path {
+  fill: var(--ellipse-30-color);
+}
+
+.catalog__accordion--content .catalog__svg--container--list {
+  transition: transform 0.3s ease-in-out;
 }
 
 .catalog__accordion--active .catalog__svg--container--list {
@@ -912,9 +989,44 @@ time {
 }
 
 .catalog__button--panel--list {
+  position: relative;
   color: var(--ellipse-29-color);
   font-size: 16px;
   line-height: 200%;
+  transition: background 0.2s;
+}
+
+.catalog__button--panel--list.focus-visible {
+  outline: none;
+  background-color: var(--ellipse-19-color);
+}
+
+.catalog__button--panel--list:hover {
+  background-color: transparent;
+}
+
+.catalog__button--panel--list:active {
+  background-color: transparent;
+}
+
+.catalog__button--panel--list::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 100%;
+  background-color: var(--ellipse-19-color);
+  transition: opacity 0.2s;
+  opacity: 0;
+}
+
+.catalog__button--panel--list:hover::after {
+  opacity: 1;
+}
+
+.catalog__button--panel--list:active::after {
+  opacity: 0;
 }
 
 .catalog__button--panel--list--active {
@@ -961,7 +1073,27 @@ time {
   color: var(--ellipse-19-color);
   font-size: 16px;
   font-weight: 600;
+  transition: background 0.2s, color 0.2s;
 }
+
+.catalog__link--panel--section.focus-visible {
+  outline: none;
+  background-color: var(--ellipse-19-color);
+  color: var(--ellipse-20-color);
+}
+
+.catalog__link--panel--section:hover {
+  outline: none;
+  background-color: transparent;
+  color: var(--ellipse-18-color);
+}
+
+.catalog__link--panel--section:active {
+  outline: none;
+  background-color: transparent;
+  color: var(--ellipse-29-color);
+}
+
 
 /* events */
 .events__section {
