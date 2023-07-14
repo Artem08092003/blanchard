@@ -120,8 +120,10 @@
   width: 50px;
   height: 50px;
   border-radius: 100%;
+  border: 2px solid var(--ellipse-26-color);
   background-color: var(--ellipse-26-color);
   transform: translateY(-50%);
+  transition: background 0.2s;
 }
 
 .events__container .swiper-button-prev {
@@ -136,9 +138,9 @@
   content: '';
   position: absolute;
   left: 21px;
-  right: 18px;
-  top: 21px;
-  bottom: 18px;
+  right: 19px;
+  top: 20px;
+  bottom: 20px;
   transform: rotate(45deg);
   border-left: 1px solid var(--ellipse-16-color);
   border-bottom: 1px solid var(--ellipse-16-color);
@@ -147,10 +149,10 @@
 .events__container .swiper-button-next::after {
   content: '';
   position: absolute;
-  left: 18px;
-  right: 21px;
-  top: 18px;
-  bottom: 21px;
+  left: 20px;
+  right: 20px;
+  top: 20px;
+  bottom: 20px;
   transform: rotate(45deg);
   border-right: 1px solid var(--ellipse-16-color);
   border-top: 1px solid var(--ellipse-16-color);
@@ -159,6 +161,26 @@
 .events__container .swiper-button-prev.swiper-button-disabled,
 .events__container .swiper-button-next.swiper-button-disabled {
   opacity: 0;
+}
+
+.events__container .swiper-button-prev.focus-visible,
+.events__container .swiper-button-next.focus-visible {
+  outline: none;
+  border: 2px solid var(--ellipse-19-color);
+}
+
+.events__container .swiper-button-prev:hover,
+.events__container .swiper-button-next:hover {
+  outline: none;
+  border: 2px solid var(--ellipse-30-color);
+  background-color: var(--ellipse-30-color);
+}
+
+.events__container .swiper-button-prev:active,
+.events__container .swiper-button-next:active {
+  outline: none;
+  border: 2px solid var(--ellipse-19-color);
+  background-color: var(--ellipse-30-color);
 }
 
 

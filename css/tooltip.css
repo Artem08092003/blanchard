@@ -2,80 +2,101 @@
 .projects__tooltip,
 .projects__tooltip--market,
 .projects__tooltip--popup {
-    margin: 0;
+  margin: 0;
 }
 
 .projects__tooltip {
-    position: relative;
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    vertical-align: middle;
+  position: relative;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
 }
 
 .projects__tooltip--market {
-    display: inline-block;
-    position: relative;
-    width: inherit;
-    height: inherit;
-    cursor: pointer;
+  display: inline-block;
+  position: relative;
+  width: inherit;
+  height: inherit;
+  cursor: pointer;
 }
 
 .projects__tooltip--market::before {
-    content: "";
-    position: absolute;
-    z-index: 10;
-    bottom: calc(100% + 5px);
-    width: 15px;
-    height: 15px;
-    background-color: var(--ellipse-19-color);
-    transform: matrix(-0.71, -0.71, -0.71, 0.71, 0, 0);
-    opacity: 0;
+  content: "";
+  position: absolute;
+  z-index: 10;
+  bottom: calc(100% + 5px);
+  width: 15px;
+  height: 15px;
+  background-color: var(--ellipse-19-color);
+  transform: matrix(-0.71, -0.71, -0.71, 0.71, 0, 0);
+  opacity: 0;
 }
 
 .projects__tooltip--market:focus::before {
-    opacity: 1;
+  opacity: 1;
 }
 
 .projects__tooltip--market:hover::before {
-    opacity: 1;
+  opacity: 1;
 }
 
-/* .projects__tooltip--market svg path {
-    fill: #bcbcbc;
-    transition: fill 0.3s;
-} */
+.projects__tooltip--market svg {
+  fill: transparent;
+  transition: fill 0.2s;
+}
+
+.projects__tooltip--market.focus-visible {
+  outline: none;
+}
+
+.projects__tooltip--market.focus-visible svg {
+  outline: none;
+   fill: var(--ellipse-30-color);
+}
+
+.projects__tooltip--market:hover svg {
+  outline: none;
+  fill: var(--ellipse-30-color);
+}
+
+.projects__tooltip--market:active svg {
+  outline: none;
+  fill: var(--ellipse-19-color);
+}
+
+.projects__tooltip--market svg path[fill] {
+  outline: none;
+  fill: var(--ellipse-16-color);
+}
+
+.projects__tooltip--market:active svg path[fill] {
+  outline: none;
+  fill: var(--ellipse-20-color);
+}
 
 .projects__tooltip--popup {
-    position: absolute;
-    left: calc(-253px / 2);
-    bottom: calc(100% + 11px);
-    z-index: 20;
-    width: 265px;
-    min-height: 31px;
-    padding: 7px 11px;
-    opacity: 0;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 16px;
-    word-spacing: 3px;
-    text-align: center;
-    background-color: var(--ellipse-19-color);
-    color: #FFFFFF;
+  position: absolute;
+  left: calc(-253px / 2);
+  bottom: calc(100% + 11px);
+  z-index: 20;
+  width: 265px;
+  min-height: 31px;
+  padding: 7px 11px;
+  opacity: 0;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  word-spacing: 3px;
+  text-align: center;
+  background-color: var(--ellipse-19-color);
+  color: #FFFFFF;
 }
 
 .projects__tooltip--market:focus+.projects__tooltip--popup {
-    opacity: 1;
+  opacity: 1;
 }
-
-/* .projects__tooltip--market:focus svg path {
-    fill: #CCB26E;
-} */
 
 .projects__tooltip--market:hover+.projects__tooltip--popup {
-    opacity: 1;
+  opacity: 1;
 }
-
-/* .projects__tooltip--market:hover svg path {
-    fill: #CCB26E;
-} */
