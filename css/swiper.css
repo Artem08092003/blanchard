@@ -194,9 +194,30 @@
   position: absolute;
   width: 30px;
   height: 30px;
-  border-color: transparent;
+  border: 2px solid var(--ellipse-26-color);
   border-radius: 100%;
   background-color: var(--ellipse-26-color);
+  transition: border 0.2s, background-color 0.2s;
+}
+
+.projects__swiper-button-prev.focus-visible,
+.projects__swiper-button-next.focus-visible {
+  outline: none;
+  border: 2px solid var(--ellipse-19-color);
+}
+
+.projects__swiper-button-prev:hover,
+.projects__swiper-button-next:hover {
+  outline: none;
+  border: 2px solid var(--ellipse-30-color);
+  background-color: var(--ellipse-30-color);
+}
+
+.projects__swiper-button-prev:active,
+.projects__swiper-button-next:active {
+  outline: none;
+  border: 2px solid var(--ellipse-19-color);
+  background-color: var(--ellipse-30-color);
 }
 
 .projects__swiper-button-prev::after {
