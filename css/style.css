@@ -196,7 +196,24 @@ time {
   background-color: transparent;
 }
 
-.header__btn--login:hover svg path {
+.header__btn--login:hover .header__svg--login {
+  display: none;
+}
+
+.header__btn--login .header__svg--login--active {
+  display: none;
+}
+
+.header__btn--login:hover .header__svg--login--active {
+  margin-right: 3px;
+  display: block;
+}
+
+.header__btn--login .header__svg--login--active path {
+  fill: var(--ellipse-20-color);
+}
+
+.header__btn--login:hover .header__svg--login--active path {
   fill: var(--ellipse-24-color);
 }
 
@@ -204,7 +221,16 @@ time {
   color: var(--ellipse-24-color);
 }
 
-.header__btn--login:active svg path {
+.header__btn--login:active .header__svg--login {
+  display: none;
+}
+
+.header__btn--login:active .header__svg--login--active {
+  display: block;
+  margin-right: 3px;
+}
+
+.header__btn--login:active .header__svg--login--active path {
   fill: var(--ellipse-19-color);
 }
 
@@ -1622,6 +1648,10 @@ time {
 #myMap-1 {
   width: 100%;
   min-height: 700px;
+}
+
+#myMap-1.focus-visible {
+  outline: 3px solid var(--ellipse-18-color);
 }
 
 .footer__section--bottom {

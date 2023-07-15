@@ -45,30 +45,35 @@
           <nav class="header__nav">
             <ul class="list--reset list header__list flex">
               <li class="header__item">
-                <a class="header__item--link" href="#">О нас</a>
+                <a class="header__item--link" href="#about">О нас</a>
               </li>
               <li class="header__item">
-                <a class="header__item--link" href="#">Галерея</a>
+                <a class="header__item--link" href="#gallery">Галерея</a>
               </li>
               <li class="header__item">
-                <a class="header__item--link" href="#">Каталог</a>
+                <a class="header__item--link" href="#catalog">Каталог</a>
               </li>
               <li class="header__item">
-                <a class="header__item--link" href="#">События</a>
+                <a class="header__item--link" href="#events">События</a>
               </li>
               <li class="header__item">
-                <a class="header__item--link" href="#">Проекты</a>
+                <a class="header__item--link" href="#projects">Проекты</a>
               </li>
               <li class="header__item">
-                <a class="header__item--link" href="#">Контакты</a>
+                <a class="header__item--link" href="#contacts">Контакты</a>
               </li>
             </ul>
           </nav>
         </div>
         <button class="btn--reset btn header__btn--login flex">
-          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
+          <svg class="header__svg--login" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
             <path
               d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z"
+              fill="none" />
+          </svg>
+          <svg class="header__svg--login--active" xmlns="http://www.w3.org/2000/svg" width="18" height="13" viewBox="0 0 18 13" fill="none">
+            <path
+              d="M9.62056 9.09278L10.6389 10.1111L14.25 6.5L10.6389 2.88889L9.62056 3.90722L11.4839 5.77778H0V7.22222H11.4839L9.62056 9.09278ZM16.0556 0H5.94444C5.14278 0 4.5 0.65 4.5 1.44444V4.33333H5.94444V1.44444H16.0556V11.5556H5.94444V8.66667H4.5V11.5556C4.5 12.35 5.14278 13 5.94444 13H16.0556C16.85 13 17.5 12.35 17.5 11.5556V1.44444C17.5 0.65 16.85 0 16.0556 0Z"
               fill="none" />
           </svg>
           <span>Войти</span>
@@ -276,7 +281,7 @@
   </header>
 
   <main class="main">
-    <section class="swiper hero__section--swiper">
+    <section id="hero" class="swiper hero__section--swiper">
       <!-- Additional required wrapper -->
       <div class="swiper-wrapper hero__wrapper">
         <!-- Slides -->
@@ -294,13 +299,13 @@
             заданий создаёт предпосылки для новых предложений
           </p>
         </div>
-        <button class="btn--reset btn hero__btn">
+        <button class="btn--reset btn hero__btn" onclick="window.location.href='#contacts'">
           Подписаться на рассылку
         </button>
       </div>
     </section>
 
-    <section class="section about__section">
+    <section id="about" class="section about__section">
       <div class="container about__container">
         <div class="about__block">
           <h2 class="h2 about__h2">
@@ -321,7 +326,7 @@
       </div>
     </section>
 
-    <section class="section gallery__section">
+    <section id="gallery" class="section gallery__section">
       <div class="container gallery__container flex">
         <div class="gallery__block--left flex">
           <h2 class="h2 gallery__h2">
@@ -399,7 +404,7 @@
       </div>
     </section>
 
-    <section class="section catalog__section">
+    <section id="catalog" class="section catalog__section">
       <div class="container catalog__container">
         <h2 class="h2 catalog__h2">
           Каталог
@@ -425,7 +430,7 @@
               <p class="descr catalog__descr--article">
                 Пока ничего… Зато мы точно знаем, что в галерее есть на что посмотреть!
               </p>
-              <a href="#" class="catalog__link--article">В галерею</a>
+              <a href="#gallery" class="catalog__link--article">В галерею</a>
             </article>
             <article class="catalog__subblock--article" data-target-catalog="two">
               <img src="img/catalog-3.jpeg" alt="картина пока пусто" class="catalog__img--article">
@@ -455,7 +460,7 @@
               <p class="descr catalog__descr--article">
                 Пока ничего… Зато мы точно знаем, что в галерее есть на что посмотреть!
               </p>
-              <a href="#" class="catalog__link--article">В галерею</a>
+              <a href="#gallery" class="catalog__link--article">В галерею</a>
             </article>
             <article class="catalog__subblock--article" data-target-catalog="four">
               <img src="img/catalog-2.png" alt="картина пока пусто" class="catalog__img--article">
@@ -469,7 +474,7 @@
               <p class="descr catalog__descr--article">
                 Пока ничего… Зато мы точно знаем, что в галерее есть на что посмотреть!
               </p>
-              <a href="#" class="catalog__link--article">В галерею</a>
+              <a href="#gallery" class="catalog__link--article">В галерею</a>
             </article>
             <article class="catalog__subblock--article" data-target-catalog="five">
               <img src="img/catalog-2.png" alt="картина пока пусто" class="catalog__img--article">
@@ -483,7 +488,7 @@
               <p class="descr catalog__descr--article">
                 Пока ничего… Зато мы точно знаем, что в галерее есть на что посмотреть!
               </p>
-              <a href="#" class="catalog__link--article">В галерею</a>
+              <a href="#gallery" class="catalog__link--article">В галерею</a>
             </article>
             <article class="catalog__subblock--article" data-target-catalog="six">
               <img src="img/catalog-2.png" alt="картина пока пусто" class="catalog__img--article">
@@ -497,7 +502,7 @@
               <p class="descr catalog__descr--article">
                 Пока ничего… Зато мы точно знаем, что в галерее есть на что посмотреть!
               </p>
-              <a href="#" class="catalog__link--article">В галерею</a>
+              <a href="#gallery" class="catalog__link--article">В галерею</a>
             </article>
             <article class="catalog__subblock--article" data-target-catalog="seven">
               <img src="img/catalog-2.png" alt="картина пока пусто" class="catalog__img--article">
@@ -511,7 +516,7 @@
               <p class="descr catalog__descr--article">
                 Пока ничего… Зато мы точно знаем, что в галерее есть на что посмотреть!
               </p>
-              <a href="#" class="catalog__link--article">В галерею</a>
+              <a href="#gallery" class="catalog__link--article">В галерею</a>
             </article>
             <article class="catalog__subblock--article" data-target-catalog="eight">
               <img src="img/catalog-2.png" alt="картина пока пусто" class="catalog__img--article">
@@ -525,7 +530,7 @@
               <p class="descr catalog__descr--article">
                 Пока ничего… Зато мы точно знаем, что в галерее есть на что посмотреть!
               </p>
-              <a href="#" class="catalog__link--article">В галерею</a>
+              <a href="#gallery" class="catalog__link--article">В галерею</a>
             </article>
             <article class="catalog__subblock--article" data-target-catalog="nine">
               <img src="img/catalog-2.png" alt="картина пока пусто" class="catalog__img--article">
@@ -539,7 +544,7 @@
               <p class="descr catalog__descr--article">
                 Пока ничего… Зато мы точно знаем, что в галерее есть на что посмотреть!
               </p>
-              <a href="#" class="catalog__link--article">В галерею</a>
+              <a href="#gallery" class="catalog__link--article">В галерею</a>
             </article>
             <article class="catalog__subblock--article" data-target-catalog="ten">
               <img src="img/catalog-2.png" alt="картина пока пусто" class="catalog__img--article">
@@ -553,7 +558,7 @@
               <p class="descr catalog__descr--article">
                 Пока ничего… Зато мы точно знаем, что в галерее есть на что посмотреть!
               </p>
-              <a href="#" class="catalog__link--article">В галерею</a>
+              <a href="#gallery" class="catalog__link--article">В галерею</a>
             </article>
             <article class="catalog__subblock--article" data-target-catalog="eleven">
               <img src="img/catalog-2.png" alt="картина пока пусто" class="catalog__img--article">
@@ -567,7 +572,7 @@
               <p class="descr catalog__descr--article">
                 Пока ничего… Зато мы точно знаем, что в галерее есть на что посмотреть!
               </p>
-              <a href="#" class="catalog__link--article">В галерею</a>
+              <a href="#gallery" class="catalog__link--article">В галерею</a>
             </article>
             <article class="catalog__subblock--article catalog__sublock--article--active" data-target-catalog="twelve">
               <img src="img/catalog-1.png" alt="картина Доменико Гирландайо" class="catalog__img--article">
@@ -598,7 +603,7 @@
               <p class="descr catalog__descr--article">
                 Пока ничего… Зато мы точно знаем, что в галерее есть на что посмотреть!
               </p>
-              <a href="#" class="catalog__link--article">В галерею</a>
+              <a href="#gallery" class="catalog__link--article">В галерею</a>
             </article>
             <article class="catalog__subblock--article" data-target-catalog="fourteen">
               <img src="img/catalog-2.png" alt="картина пока пусто" class="catalog__img--article">
@@ -612,7 +617,7 @@
               <p class="descr catalog__descr--article">
                 Пока ничего… Зато мы точно знаем, что в галерее есть на что посмотреть!
               </p>
-              <a href="#" class="catalog__link--article">В галерею</a>
+              <a href="#gallery" class="catalog__link--article">В галерею</a>
             </article>
             <article class="catalog__subblock--article" data-target-catalog="fiveteen">
               <img src="img/catalog-2.png" alt="картина пока пусто" class="catalog__img--article">
@@ -626,7 +631,7 @@
               <p class="descr catalog__descr--article">
                 Пока ничего… Зато мы точно знаем, что в галерее есть на что посмотреть!
               </p>
-              <a href="#" class="catalog__link--article">В галерею</a>
+              <a href="#gallery" class="catalog__link--article">В галерею</a>
             </article>
             <article class="catalog__subblock--article" data-target-catalog="sixteen">
               <img src="img/catalog-2.png" alt="картина пока пусто" class="catalog__img--article">
@@ -640,7 +645,7 @@
               <p class="descr catalog__descr--article">
                 Пока ничего… Зато мы точно знаем, что в галерее есть на что посмотреть!
               </p>
-              <a href="#" class="catalog__link--article">В галерею</a>
+              <a href="#gallery" class="catalog__link--article">В галерею</a>
             </article>
             <article class="catalog__subblock--article" data-target-catalog="seventeen">
               <img src="img/catalog-2.png" alt="картина пока пусто" class="catalog__img--article">
@@ -654,7 +659,7 @@
               <p class="descr catalog__descr--article">
                 Пока ничего… Зато мы точно знаем, что в галерее есть на что посмотреть!
               </p>
-              <a href="#" class="catalog__link--article">В галерею</a>
+              <a href="#gallery" class="catalog__link--article">В галерею</a>
             </article>
             <article class="catalog__subblock--article" data-target-catalog="eighteen">
               <img src="img/catalog-2.png" alt="картина пока пусто" class="catalog__img--article">
@@ -668,7 +673,7 @@
               <p class="descr catalog__descr--article">
                 Пока ничего… Зато мы точно знаем, что в галерее есть на что посмотреть!
               </p>
-              <a href="#" class="catalog__link--article">В галерею</a>
+              <a href="#gallery" class="catalog__link--article">В галерею</a>
             </article>
             <article class="catalog__subblock--article" data-target-catalog="nineteen">
               <img src="img/catalog-2.png" alt="картина пока пусто" class="catalog__img--article">
@@ -682,7 +687,7 @@
               <p class="descr catalog__descr--article">
                 Пока ничего… Зато мы точно знаем, что в галерее есть на что посмотреть!
               </p>
-              <a href="#" class="catalog__link--article">В галерею</a>
+              <a href="#gallery" class="catalog__link--article">В галерею</a>
             </article>
             <article class="catalog__subblock--article" data-target-catalog="twenty">
               <img src="img/catalog-2.png" alt="картина пока пусто" class="catalog__img--article">
@@ -696,7 +701,7 @@
               <p class="descr catalog__descr--article">
                 Пока ничего… Зато мы точно знаем, что в галерее есть на что посмотреть!
               </p>
-              <a href="#" class="catalog__link--article">В галерею</a>
+              <a href="#gallery" class="catalog__link--article">В галерею</a>
             </article>
             <article class="catalog__subblock--article" data-target-catalog="twenty one">
               <img src="img/catalog-2.png" alt="картина пока пусто" class="catalog__img--article">
@@ -710,7 +715,7 @@
               <p class="descr catalog__descr--article">
                 Пока ничего… Зато мы точно знаем, что в галерее есть на что посмотреть!
               </p>
-              <a href="#" class="catalog__link--article">В галерею</a>
+              <a href="#gallery" class="catalog__link--article">В галерею</a>
             </article>
             <article class="catalog__subblock--article" data-target-catalog="twenty two">
               <img src="img/catalog-2.png" alt="картина пока пусто" class="catalog__img--article">
@@ -724,7 +729,7 @@
               <p class="descr catalog__descr--article">
                 Пока ничего… Зато мы точно знаем, что в галерее есть на что посмотреть!
               </p>
-              <a href="#" class="catalog__link--article">В галерею</a>
+              <a href="#gallery" class="catalog__link--article">В галерею</a>
             </article>
             <article class="catalog__subblock--article" data-target-catalog="twenty three">
               <img src="img/catalog-2.png" alt="картина пока пусто" class="catalog__img--article">
@@ -738,7 +743,7 @@
               <p class="descr catalog__descr--article">
                 Пока ничего… Зато мы точно знаем, что в галерее есть на что посмотреть!
               </p>
-              <a href="#" class="catalog__link--article">В галерею</a>
+              <a href="#gallery" class="catalog__link--article">В галерею</a>
             </article>
             <article class="catalog__subblock--article" data-target-catalog="twenty four">
               <img src="img/catalog-2.png" alt="картина пока пусто" class="catalog__img--article">
@@ -752,7 +757,7 @@
               <p class="descr catalog__descr--article">
                 Пока ничего… Зато мы точно знаем, что в галерее есть на что посмотреть!
               </p>
-              <a href="#" class="catalog__link--article">В галерею</a>
+              <a href="#gallery" class="catalog__link--article">В галерею</a>
             </article>
           </div>
           <ul class="list--reset list catalog__list catalog__accordion--container">
@@ -934,7 +939,7 @@
                       <p class="descr catalog__descr--panel--section">
                         А в галерее вы всегда можете найти что-то интересное для себя
                       </p>
-                      <a href="#" class="catalog__link--panel--section">
+                      <a href="#gallery" class="catalog__link--panel--section">
                         В галерею
                       </a>
                     </div>
@@ -972,7 +977,7 @@
                       <p class="descr catalog__descr--panel--section">
                         А в галерее вы всегда можете найти что-то интересное для себя
                       </p>
-                      <a href="#" class="catalog__link--panel--section">
+                      <a href="#gallery" class="catalog__link--panel--section">
                         В галерею
                       </a>
                     </div>
@@ -1010,7 +1015,7 @@
                       <p class="descr catalog__descr--panel--section">
                         А в галерее вы всегда можете найти что-то интересное для себя
                       </p>
-                      <a href="#" class="catalog__link--panel--section">
+                      <a href="#gallery" class="catalog__link--panel--section">
                         В галерею
                       </a>
                     </div>
@@ -1048,7 +1053,7 @@
                       <p class="descr catalog__descr--panel--section">
                         А в галерее вы всегда можете найти что-то интересное для себя
                       </p>
-                      <a href="#" class="catalog__link--panel--section">
+                      <a href="#gallery" class="catalog__link--panel--section">
                         В галерею
                       </a>
                     </div>
@@ -1086,7 +1091,7 @@
                       <p class="descr catalog__descr--panel--section">
                         А в галерее вы всегда можете найти что-то интересное для себя
                       </p>
-                      <a href="#" class="catalog__link--panel--section">
+                      <a href="#gallery" class="catalog__link--panel--section">
                         В галерею
                       </a>
                     </div>
@@ -1124,7 +1129,7 @@
                       <p class="descr catalog__descr--panel--section">
                         А в галерее вы всегда можете найти что-то интересное для себя
                       </p>
-                      <a href="#" class="catalog__link--panel--section">
+                      <a href="#gallery" class="catalog__link--panel--section">
                         В галерею
                       </a>
                     </div>
@@ -1137,7 +1142,7 @@
       </div>
     </section>
 
-    <section class="section events__section">
+    <section id="events" class="section events__section">
       <div class="container events__container">
         <h2 class="h2 events__h2">
           События
@@ -1276,7 +1281,7 @@
       </div>
     </section>
 
-    <section class="section projects__section">
+    <section id="projects" class="section projects__section">
       <div class="container projects__container">
         <h2 class="h2 projects__h2">
           Проекты
@@ -1437,23 +1442,24 @@
     </section>
   </main>
 
-  <footer class="footer">
+  <footer id="contacts" class="footer">
     <section class="footer__section--top">
       <div class="container footer__container flex">
         <address class="footer__address">
           <h3 class="h3 footer__h3">
             Шоурум №4
           </h3>
-          <a href="#" class="footer__address--link">
+          <a href="https://yandex.ru/maps/213/moscow/house/leontyevskiy_pereulok_5s1/Z04YcAdhSU0PQFtvfXt0eXhlbA==/?ll=37.602663%2C55.758468&z=16.71"
+            target="_blank" class="footer__address--link">
             Леонтьевский переулок, дом 5/1
           </a>
         </address>
         <form action="https://jsonplaceholder.typicode.com/posts" method="post" class="footer__form flex">
-          <label for="name" class="footer__label">
+          <label for="footerName" class="footer__label">
             <input class="footer__input" id="footerName" type="text" name="name" placeholder="Имя*" required
               data-validate-field="name">
           </label>
-          <label for="name" class="footer__label">
+          <label for="footerTel" class="footer__label">
             <input class="footer__input" id="footerTel" type="tel" name="tel" placeholder="Телефон*" required
               data-validate-field="tel" data-validate-rules="phone">
           </label>
