@@ -261,3 +261,56 @@ function init() {
   // Размещение геообъекта на карте.
   myMap.geoObjects.add(myPlacemark);
 }
+
+
+// Burger menu header---------------------------------------------------------------------------------------------------------------------------------------------
+const headerBurger = document.querySelector('.header__burger--btn');
+const headerBurgerLine = document.querySelectorAll('.header__burger--line');
+const headerMenu = document.querySelector('.header__nav');
+const headerMenuLinks = headerMenu.querySelectorAll('.header__item .header__item--link');
+const headerBtnLogin = document.querySelector('.header__btn--login');
+
+headerBurger.addEventListener('click', function () {
+
+  headerBurgerLine.forEach(function (line) {
+    line.classList.toggle('header__burger--line--active');
+  });
+
+  headerMenu.classList.toggle('header__nav--active');
+
+  headerBtnLogin.classList.toggle('header__btn--login--active');
+
+  document.body.classList.toggle('header__stop--scroll');
+});
+
+headerMenuLinks.forEach(function (el) {
+  el.addEventListener('click', function () {
+
+    headerBurgerLine.forEach(function (line) {
+      line.classList.remove('header__burger--line--active');
+    });
+
+    headerMenu.classList.remove('header__nav--active');
+
+    headerBtnLogin.classList.remove('header__btn--login--active');
+
+    document.body.classList.remove('header__stop--scroll');
+  });
+});
+
+
+// search btn header-----------------------------------------------------------------------------------------------------------------------------------------------
+const headerSearchForm = document.querySelector('.header__container--search--top'),
+    headerSearchBtnOpen = document.querySelector('.header__btn--search--top'),
+    headerSearchBtn = document.querySelector('.header__form--search--btn--top'),
+    headerSearchBtnClose = document.querySelector('.header__form--search--close--top');
+
+headerSearchBtnOpen.addEventListener('click', function (el) {
+  headerSearchForm.classList.add('header__container--search--top--active');
+  headerSearchBtnOpen.classList.add('header__form--search--close--top')
+});
+
+headerSearchBtnClose.addEventListener('click', function () {
+  headerSearchForm.classList.remove('header__container--search--top--active');
+  headerSearchBtnOpen.classList.remove('header__form--search--close--top')
+});
