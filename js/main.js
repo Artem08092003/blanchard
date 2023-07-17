@@ -89,10 +89,14 @@ function initGallerySwiper() {
     slidesPerGroup: 3,
     effect: 'slide',
     speed: 700,
-    simulateTouch: false, // запретить свайп только на мыши
     navigation: {
       nextEl: '.gallery__subblock--arrows .swiper-button-next',
       prevEl: '.gallery__subblock--arrows .swiper-button-prev',
+    },
+
+    pagination: {
+      el: ".gallery__subblock--arrows .gallery__swiper-pagination",
+      type: 'fraction',
     },
   });
 }
@@ -115,19 +119,6 @@ initGallerySwiper(); // Инициализация Swiper при загрузк�
 updateGallerySwiper(); // Обновление Swiper при загрузке страницы
 
 window.addEventListener('resize', updateGallerySwiper); // Обновление Swiper при изменении размера окна
-
-
-
-// gallery-numbering---------------------------------------------------------------------------------------------------------
-document.querySelector('.gallery__swiper-button-prev').addEventListener('click', function () {
-  document.querySelector('.gallery__numbering--1').classList.add('gallery__numbering--active');
-  document.querySelector('.gallery__numbering--2').classList.remove('gallery__numbering--active');
-});
-
-document.querySelector('.gallery__swiper-button-next').addEventListener('click', function () {
-  document.querySelector('.gallery__numbering--1').classList.remove('gallery__numbering--active');
-  document.querySelector('.gallery__numbering--2').classList.add('gallery__numbering--active');
-});
 
 
 // catalog-accordion-------------------------------------------------------------------------------------------------------------

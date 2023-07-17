@@ -95,7 +95,8 @@
           </svg>
         </button>
         <div class="header__container--search--top flex">
-          <form class="header__form--search--top flex" action="https://jsonplaceholder.typicode.com/posts" method="post">
+          <form class="header__form--search--top flex" action="https://jsonplaceholder.typicode.com/posts"
+            method="post">
             <button class="btn--reset btn header__form--search--btn--top">
               <svg xmlns="http://www.w3.org/2000/svg" width="30" height="29" viewBox="0 0 30 29" fill="none">
                 <rect width="9.15446" height="2.28862"
@@ -338,7 +339,7 @@
             заданий создаёт предпосылки для новых предложений
           </p>
         </div>
-        <button class="btn--reset btn hero__btn" onclick="window.location.href='#contacts'">
+        <button class="btn--reset btn hero__btn" onclick="window.location.href='#map'">
           Подписаться на рассылку
         </button>
       </div>
@@ -399,12 +400,7 @@
         <div id="gallerySwiper" class="gallery__block--right swiper flex">
           <div class="gallery__subblock--arrows flex">
             <button class="btn--reset swiper-button-prev gallery__swiper-button-prev"></button>
-            <span class="gallery__numbering gallery__numbering--1 gallery__numbering--active">
-              1 / 2
-            </span>
-            <span class="gallery__numbering gallery__numbering--2">
-              2 / 2
-            </span>
+            <div class="swiper-pagination gallery__swiper-pagination"></div>
             <button class="btn--reset swiper-button-next gallery__swiper-button-next"></button>
           </div>
           <div class=" swiper-wrapper gallery__subblock--pictures">
@@ -458,21 +454,23 @@
         <div class="catalog__block flex">
           <div class="catalog__subblock">
             <article class="catalog__subblock--article" data-target-catalog="one">
-              <img src="img/catalog-2.png" alt="картина пока пусто" class="catalog__img--article">
+              <img src="img/catalog-4.jpg" alt="картина Бенедетто ди Биндо" class="catalog__img--article">
               <h3 class="h3 catalog__h3--article">
-                Что мы о нём знаем?
+                Бенедетто ди Биндо
               </h3>
               <div class="catalog__time--block--article">
-                <time datetime="" class="catalog__time--article"></time>
-                <time datetime="" class="catalog__time--article"></time>
+                <time datetime="1380" class="catalog__time--article">1380</time>
+                <time datetime="1417" class="catalog__time--article">-1417</time>
               </div>
               <p class="descr catalog__descr--article">
-                Пока ничего… Зато мы точно знаем, что в галерее есть на что посмотреть!
+                Бенедетто ди Биндо остался в истории искусства как сиенский художник, так сказать, «второго ряда»,
+                несмотря на то, что за свою короткую жизнь он выполнил ряд весьма престижных заказов, включая работы в
+                Сиенском соборе (работы в главном соборе республики второстепенным художникам не поручались).
               </p>
-              <a href="#gallery" class="catalog__link--article">В галерею</a>
+              <!-- <a href="#gallery" class="catalog__link--article">В галерею</a> -->
             </article>
             <article class="catalog__subblock--article" data-target-catalog="two">
-              <img src="img/catalog-3.jpeg" alt="картина пока пусто" class="catalog__img--article">
+              <img src="img/catalog-3.jpeg" alt="картина Бергоньоне, Амброджо" class="catalog__img--article">
               <h3 class="h3 catalog__h3--article">
                 Бергоньоне, Амброджо
               </h3>
@@ -488,46 +486,55 @@
               <!-- <a href="#" class="catalog__link--article">В галерею</a> -->
             </article>
             <article class="catalog__subblock--article" data-target-catalog="three">
-              <img src="img/catalog-2.png" alt="картина пока пусто" class="catalog__img--article">
+              <img src="img/catalog-5.jpg" alt="картина Биссоло, Франческо" class="catalog__img--article">
               <h3 class="h3 catalog__h3--article">
-                Что мы о нём знаем?
+                Биссоло, Франческо
               </h3>
               <div class="catalog__time--block--article">
-                <time datetime="" class="catalog__time--article"></time>
-                <time datetime="" class="catalog__time--article"></time>
+                <time datetime="1470" class="catalog__time--article">1470</time>
+                <time datetime="1554-04-20" class="catalog__time--article">-20 апреля 1554</time>
               </div>
               <p class="descr catalog__descr--article">
-                Пока ничего… Зато мы точно знаем, что в галерее есть на что посмотреть!
+                Сын художника. Ученик Джованни Беллини. С 1490 переехал в мастерскую Беллини. С 1492 по 1530 год работал
+                в Венеции. Помогал учителю в работе над украшением Большого зала Совета Дворца дожей (Венеция). Принимал
+                участие в создании украшений Церкви Иль Реденторе в Венеции.
               </p>
-              <a href="#gallery" class="catalog__link--article">В галерею</a>
+              <!-- <a href="#gallery" class="catalog__link--article">В галерею</a> -->
             </article>
             <article class="catalog__subblock--article" data-target-catalog="four">
-              <img src="img/catalog-2.png" alt="картина пока пусто" class="catalog__img--article">
+              <img src="img/catalog-6.jpg" alt="картина Больтраффио, Джованни" class="catalog__img--article">
               <h3 class="h3 catalog__h3--article">
-                Что мы о нём знаем?
+                Больтраффио, Джованни
               </h3>
               <div class="catalog__time--block--article">
-                <time datetime="" class="catalog__time--article"></time>
-                <time datetime="" class="catalog__time--article"></time>
+                <time datetime="1467" class="catalog__time--article">1467</time>
+                <time datetime="1516" class="catalog__time--article">-1516</time>
               </div>
               <p class="descr catalog__descr--article">
-                Пока ничего… Зато мы точно знаем, что в галерее есть на что посмотреть!
+                Вазари сообщает, что художник происходил из аристократической семьи. Воспитанный в традициях Фоппы,
+                Бернардо Дзенале и Амброджо Бергоньоне, он прошёл обучение в мастерской Леонардо. Его первое
+                произведение «Воскресение Христа, святой Леонард и святая Лючия» выполнено в 1491 году совместно с Марко
+                д'Оджоно для миланской церкви Сан-Джованни-сул-Муро. Был придворным художником Лодовико Моро и славился
+                своими психологическими портретами.
               </p>
-              <a href="#gallery" class="catalog__link--article">В галерею</a>
+              <!-- <a href="#gallery" class="catalog__link--article">В галерею</a> -->
             </article>
             <article class="catalog__subblock--article" data-target-catalog="five">
-              <img src="img/catalog-2.png" alt="картина пока пусто" class="catalog__img--article">
+              <img src="img/catalog-7.jpg" alt="картина Бонсиньори, Франческо" class="catalog__img--article">
               <h3 class="h3 catalog__h3--article">
-                Что мы о нём знаем?
+                Бонсиньори, Франческо
               </h3>
               <div class="catalog__time--block--article">
-                <time datetime="" class="catalog__time--article"></time>
-                <time datetime="" class="catalog__time--article"></time>
+                <time datetime="1460" class="catalog__time--article">1460</time>
+                <time datetime="1519-07-02" class="catalog__time--article">-2 июля 1519</time>
               </div>
               <p class="descr catalog__descr--article">
-                Пока ничего… Зато мы точно знаем, что в галерее есть на что посмотреть!
+                Родился около 1460 года в Вероне в семье художника Альберто Бонсиньори. Обучался живописи в мастерской
+                Франческо Бенальо. В 1480 году переехал из Вероны в Венецию, где жил до 1487 года. В ранний период
+                творчества находился под влиянием венецианской живописной школы. Особенное впечатление на Бонсиньори
+                оказало творчество Антонелло да Мессины, Джованни Беллини, Чима да Конельяно и Альвизе Виварини.
               </p>
-              <a href="#gallery" class="catalog__link--article">В галерею</a>
+              <!-- <a href="#gallery" class="catalog__link--article">В галерею</a> -->
             </article>
             <article class="catalog__subblock--article" data-target-catalog="six">
               <img src="img/catalog-2.png" alt="картина пока пусто" class="catalog__img--article">
@@ -1551,7 +1558,7 @@
       </div>
     </section>
 
-    <section class="footer__section--center">
+    <section id="map" class="footer__section--center">
       <div id="myMap-1" tabindex="0" aria-label=""></div>
     </section>
 
