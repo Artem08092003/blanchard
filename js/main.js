@@ -78,20 +78,44 @@ const choices = new Choices(elementGallerySelect, {
 
 // gallery-swiper--------------------------------------------------------------------------------------------------------
 const elementGallerySwiper = document.querySelector('#gallerySwiper');
-const gallerySwiper = new Swiper(elementGallerySwiper, {
-  // параметры
-  loop: false,
-  spaceBetween: 50,
-  slidesPerView: 3,
-  slidesPerGroup: 3,
-  effect: 'slide',
-  speed: 700,
-  simulateTouch: false, // запретить свайп только на мыши
-  navigation: {
-    nextEl: '.gallery__subblock--arrows .swiper-button-next',
-    prevEl: '.gallery__subblock--arrows .swiper-button-prev',
-  },
-});
+let gallerySwiper;
+
+function initGallerySwiper() {
+  gallerySwiper = new Swiper(elementGallerySwiper, {
+    // параметры
+    loop: false,
+    spaceBetween: 50,
+    slidesPerView: 3,
+    slidesPerGroup: 3,
+    effect: 'slide',
+    speed: 700,
+    simulateTouch: false, // запретить свайп только на мыши
+    navigation: {
+      nextEl: '.gallery__subblock--arrows .swiper-button-next',
+      prevEl: '.gallery__subblock--arrows .swiper-button-prev',
+    },
+  });
+}
+
+function updateGallerySwiper() {
+  if (window.innerWidth <= 1550) {
+    gallerySwiper.params.slidesPerView = 2;
+    gallerySwiper.params.slidesPerGroup = 2;
+    gallerySwiper.params.spaceBetween = 34;
+  } else {
+    gallerySwiper.params.slidesPerView = 3;
+    gallerySwiper.params.slidesPerGroup = 3;
+    gallerySwiper.params.spaceBetween = 50;
+  }
+
+  gallerySwiper.update(); // Обновление Swiper с новыми параметрами
+}
+
+initGallerySwiper(); // Инициализация Swiper при загрузке страницы
+updateGallerySwiper(); // Обновление Swiper при загрузке страницы
+
+window.addEventListener('resize', updateGallerySwiper); // Обновление Swiper при изменении размера окна
+
 
 
 // gallery-numbering---------------------------------------------------------------------------------------------------------
@@ -142,39 +166,86 @@ document.querySelectorAll('.catalog__button--panel--list').forEach(function (cat
 
 
 // events-swiper--------------------------------------------------------------------------------------------------------------------------------
-const eventsSwiper = new Swiper('.events__block', {
-  // параметры
-  loop: false,
-  spaceBetween: 50,
-  slidesPerView: 3,
-  slidesPerGroup: 3,
-  effect: 'slide',
-  speed: 700,
-  navigation: {
-    nextEl: '.events__container .swiper-button-next',
-    prevEl: '.events__container .swiper-button-prev',
-  },
-});
+const elementEventsSwiper = document.querySelector('.events__block');
+let eventsSwiper;
+
+function initEventsSwiper() {
+  eventsSwiper = new Swiper(elementEventsSwiper, {
+    // параметры
+    loop: false,
+    spaceBetween: 50,
+    slidesPerView: 3,
+    slidesPerGroup: 3,
+    effect: 'slide',
+    speed: 700,
+    navigation: {
+      nextEl: '.events__container .swiper-button-next',
+      prevEl: '.events__container .swiper-button-prev',
+    },
+    pagination: {
+      el: ".events__container .swiper-pagination",
+      clickable: true,
+    },
+  });
+}
+
+function updateEventsSwiper() {
+  if (window.innerWidth <= 1550) {
+    eventsSwiper.params.spaceBetween = 27;
+  } else {
+    eventsSwiper.params.spaceBetween = 50;
+  }
+
+  eventsSwiper.update(); // Обновление Swiper с новыми параметрами
+}
+
+initEventsSwiper(); // Инициализация Swiper при загрузке страницы
+updateEventsSwiper(); // Обновление Swiper при загрузке страницы
+
+window.addEventListener('resize', updateEventsSwiper); // Обновление Swiper при изменении размера окна
+
 
 
 // projects-swiper---------------------------------------------------------------------------------------------------------------------------------------
-const projectsSwiper = new Swiper('.projects__swiper', {
-  // параметры
-  loop: true,
-  spaceBetween: 50,
-  slidesPerView: 3,
-  slidesPerGroup: 3,
-  effect: 'slide',
-  speed: 700,
-  navigation: {
-    nextEl: '.projects__swiper-button-next',
-    prevEl: '.projects__swiper-button-prev',
-  },
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
-  },
-});
+const elementProjectsSwiper = document.querySelector('.projects__swiper');
+let projectsSwiper;
+
+function initProjectsSwiper() {
+  projectsSwiper = new Swiper(elementProjectsSwiper, {
+    // параметры
+    loop: true,
+    spaceBetween: 50,
+    slidesPerView: 3,
+    slidesPerGroup: 3,
+    effect: 'slide',
+    speed: 700,
+    navigation: {
+      nextEl: '.projects__swiper-button-next',
+      prevEl: '.projects__swiper-button-prev',
+    },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+  });
+}
+
+function updateProjectsSwiper() {
+  if (window.innerWidth <= 1550) {
+    projectsSwiper.params.slidesPerView = 2;
+    projectsSwiper.params.slidesPerGroup = 2;
+  } else {
+    projectsSwiper.params.slidesPerView = 3;
+    projectsSwiper.params.slidesPerGroup = 3;
+  }
+
+  projectsSwiper.update(); // Обновление Swiper с новыми параметрами
+}
+
+initProjectsSwiper(); // Инициализация Swiper при загрузке страницы
+updateProjectsSwiper(); // Обновление Swiper при загрузке страницы
+
+window.addEventListener('resize', updateProjectsSwiper); // Обновление Swiper при изменении размера окна
 
 
 // footer-contact-form---------------------------------------------------------------------------------------------------------------
@@ -301,9 +372,9 @@ headerMenuLinks.forEach(function (el) {
 
 // search btn header-----------------------------------------------------------------------------------------------------------------------------------------------
 const headerSearchForm = document.querySelector('.header__container--search--top'),
-    headerSearchBtnOpen = document.querySelector('.header__btn--search--top'),
-    headerSearchBtn = document.querySelector('.header__form--search--btn--top'),
-    headerSearchBtnClose = document.querySelector('.header__form--search--close--top');
+  headerSearchBtnOpen = document.querySelector('.header__btn--search--top'),
+  headerSearchBtn = document.querySelector('.header__form--search--btn--top'),
+  headerSearchBtnClose = document.querySelector('.header__form--search--close--top');
 
 headerSearchBtnOpen.addEventListener('click', function (el) {
   headerSearchForm.classList.add('header__container--search--top--active');

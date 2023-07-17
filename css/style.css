@@ -814,6 +814,7 @@ time {
 
 .gallery__link--pictures img {
   display: block;
+  width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
@@ -1199,6 +1200,10 @@ time {
   padding-bottom: 48px;
 }
 
+.events__content--container {
+  margin-bottom: 10px;
+}
+
 .events__time--container {
   margin-bottom: 11px;
 }
@@ -1220,7 +1225,6 @@ time {
 }
 
 .events__descr {
-  margin-bottom: 10px;
   color: var(--ellipse-29-color);
   font-size: 16px;
   line-height: 200%;
@@ -1720,7 +1724,7 @@ time {
 }
 
 
-@media (max-width: 1550px) {
+@media (max-width: 1551px) {
 
   /* header */
   .header__burger--btn {
@@ -1961,8 +1965,107 @@ time {
   }
 
   /* hero */
+  .hero__container {
+    padding-top: 106px;
+    padding-bottom: 114px;
+  }
+
+  .hero__block--top {
+    max-width: 670px;
+    margin-bottom: 137px;
+  }
+
+  .hero__descr {
+    line-height: 22px;
+  }
+
   .hero__wrapper {
     top: 0;
+  }
+
+  /* about */
+  .about__section {
+    padding-top: 87px;
+  }
+
+  /* gallery */
+  .gallery__form {
+    height: 80%;
+  }
+
+  /* catalog */
+  .catalog__subblock {
+    max-width: 47.3%;
+  }
+
+  .catalog__list--panel {
+    column-count: 2;
+    width: 116%;
+  }
+
+  .catalog__item--panel--list--none {
+    display: none;
+  }
+
+  .catalog__img--container--panel--section {
+    padding: 8px;
+    max-width: 189px;
+    height: 130px;
+    overflow: hidden;
+  }
+
+  .catalog__img--container--panel--section img {
+    object-fit: contain;
+    object-position: center;
+  }
+
+  /* events */
+  .events__item--container {
+    padding-top: 200px;
+    background-size: 100% 200px;
+  }
+
+  .events__article {
+    min-height: 420px;
+    padding-left: 34px;
+    padding-right: 34px;
+    padding-bottom: 54px;
+  }
+
+  .events__content--container {
+    margin: 0;
+  }
+
+  .events__time--container {
+    margin-bottom: 2px;
+    text-align: right;
+  }
+
+  .events__h3 {
+    margin-bottom: 7px;
+  }
+
+  /* projects */
+  .projects__section {
+    padding-top: 117px;
+    padding-bottom: 80px;
+  }
+
+  .projects__text {
+    margin-bottom: 24px;
+    line-height: 196%;
+  }
+
+  .projects__h3 {
+    margin-bottom: 24px;
+  }
+
+  .projects__swiper--container {
+    padding: 0 53px;
+  }
+
+  .projects__item--link {
+    height: 128px;
   }
 }
 
