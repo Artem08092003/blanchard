@@ -112,6 +112,12 @@ function updateGallerySwiper() {
     gallerySwiper.params.spaceBetween = 50;
   }
 
+  if (window.innerWidth <= 1024) {
+    gallerySwiper.params.spaceBetween = 38;
+  } else {
+    gallerySwiper.params.spaceBetween = 50;
+  }
+
   gallerySwiper.update(); // Обновление Swiper с новыми параметрами
 }
 
@@ -181,6 +187,16 @@ function initEventsSwiper() {
 }
 
 function updateEventsSwiper() {
+  if (window.innerWidth <= 1023) {
+    eventsSwiper.params.slidesPerView = 2;
+    eventsSwiper.params.slidesPerGroup = 2;
+    eventsSwiper.params.spaceBetween = 35;
+  } else {
+    eventsSwiper.params.slidesPerView = 3;
+    eventsSwiper.params.slidesPerGroup = 3;
+    eventsSwiper.params.spaceBetween = 50;
+  }
+
   if (window.innerWidth <= 1550) {
     eventsSwiper.params.spaceBetween = 27;
   } else {
@@ -225,9 +241,17 @@ function updateProjectsSwiper() {
   if (window.innerWidth <= 1550) {
     projectsSwiper.params.slidesPerView = 2;
     projectsSwiper.params.slidesPerGroup = 2;
+    projectsSwiper.params.spaceBetween = 50;
   } else {
     projectsSwiper.params.slidesPerView = 3;
     projectsSwiper.params.slidesPerGroup = 3;
+    projectsSwiper.params.spaceBetween = 50;
+  }
+
+  if (window.innerWidth <= 1023) {
+    projectsSwiper.params.spaceBetween = 34;
+  } else {
+    projectsSwiper.params.spaceBetween = 50;
   }
 
   projectsSwiper.update(); // Обновление Swiper с новыми параметрами
