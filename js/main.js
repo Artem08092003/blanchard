@@ -78,10 +78,8 @@ const choices = new Choices(elementGallerySelect, {
 
 // gallery-swiper--------------------------------------------------------------------------------------------------------
 const elementGallerySwiper = document.querySelector('#gallerySwiper');
-let gallerySwiper;
 
-function initGallerySwiper() {
-  gallerySwiper = new Swiper(elementGallerySwiper, {
+  const gallerySwiper = new Swiper(elementGallerySwiper, {
     // параметры
     loop: false,
     spaceBetween: 50,
@@ -98,33 +96,28 @@ function initGallerySwiper() {
       el: ".gallery__subblock--arrows .gallery__swiper-pagination",
       type: 'fraction',
     },
+
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        spaceBetween: 20
+      },
+      // when window width is >= 767px
+      767: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        spaceBetween: 38
+      },
+      // when window width is >= 1551px
+      1551: {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+        spaceBetween: 50
+      }
+    }
   });
-}
-
-function updateGallerySwiper() {
-  if (window.innerWidth <= 1550) {
-    gallerySwiper.params.slidesPerView = 2;
-    gallerySwiper.params.slidesPerGroup = 2;
-    gallerySwiper.params.spaceBetween = 34;
-  } else {
-    gallerySwiper.params.slidesPerView = 3;
-    gallerySwiper.params.slidesPerGroup = 3;
-    gallerySwiper.params.spaceBetween = 50;
-  }
-
-  if (window.innerWidth <= 1024) {
-    gallerySwiper.params.spaceBetween = 38;
-  } else {
-    gallerySwiper.params.spaceBetween = 50;
-  }
-
-  gallerySwiper.update(); // Обновление Swiper с новыми параметрами
-}
-
-initGallerySwiper(); // Инициализация Swiper при загрузке страницы
-updateGallerySwiper(); // Обновление Swiper при загрузке страницы
-
-window.addEventListener('resize', updateGallerySwiper); // Обновление Swiper при изменении размера окна
 
 
 // catalog-accordion-------------------------------------------------------------------------------------------------------------

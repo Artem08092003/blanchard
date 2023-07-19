@@ -52,7 +52,7 @@
 
 .projects__tooltip--market.focus-visible svg {
   outline: none;
-   fill: var(--ellipse-30-color);
+  fill: var(--ellipse-30-color);
 }
 
 .projects__tooltip--market:hover svg {

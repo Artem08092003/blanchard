@@ -69,6 +69,12 @@
   }
 }
 
+@media (max-width: 767px) {
+  .hero__section--swiper {
+    min-height: 310px;
+  }
+}
+
 /* gallery-swiper */
 #gallerySwiper {
   width: 4600px;
@@ -169,7 +175,8 @@
 
 @media (max-width: 1551px) {
   #gallerySwiper {
-    width: 1970px;
+    width: 212%;
+    max-width: 700px;
   }
 
   #gallerySwiper .swiper-wrapper .swiper-slide {
@@ -188,6 +195,15 @@
   }
 }
 
+@media (max-width: 767px) {
+  #gallerySwiper {
+    max-width: 400px;
+  }
+
+  #gallerySwiper .swiper-wrapper .swiper-slide {
+    height: 367px;
+  }
+}
 
 /* events-swiper */
 .events__container .swiper-button-prev,
