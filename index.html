@@ -1241,7 +1241,7 @@
                       <time datetime="04-30">по 30 апреля</time>
                     </div>
                     <h3 class="h3 events__h3">
-                      Книжная гравюра в живом  восприятии
+                      Книжная гравюра в <span class="events__h3--span--none">живом</span>  восприятии
                     </h3>
                     <p class="descr events__descr">
                       Один из ведущих флорентийских художников Кватроченто, основатель художественной
@@ -1543,7 +1543,7 @@
               data-validate-field="tel" data-validate-rules="phone">
           </label>
           <button class="btn--reset btn footer__btn">
-            Заказать обратный звонок
+            Заказать <span class="footer__btn--span--none">обратный звонок</span>
           </button>
         </form>
         <div class="footer__content--social--link">
@@ -1597,7 +1597,10 @@
     <section class="section footer__section--bottom">
       <div class="container footer__container flex">
         <a href="#" class="footer__logo">
-          <img src="img/logo.svg" alt="логотип компания бланчард">
+          <picture>
+            <source media="(max-width: 767px)" srcset="img/logo(320px).svg">
+            <img src="img/logo.svg" alt="логотип компания бланчард">
+          </picture>
         </a>
         <div class="footer__social--link--container--bottom">
           <a href="#" class="footer__social--link--bottom">

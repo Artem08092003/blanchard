@@ -79,45 +79,45 @@ const choices = new Choices(elementGallerySelect, {
 // gallery-swiper--------------------------------------------------------------------------------------------------------
 const elementGallerySwiper = document.querySelector('#gallerySwiper');
 
-  const gallerySwiper = new Swiper(elementGallerySwiper, {
-    // параметры
-    loop: false,
-    spaceBetween: 50,
-    slidesPerView: 3,
-    slidesPerGroup: 3,
-    effect: 'slide',
-    speed: 700,
-    navigation: {
-      nextEl: '.gallery__subblock--arrows .swiper-button-next',
-      prevEl: '.gallery__subblock--arrows .swiper-button-prev',
-    },
+const gallerySwiper = new Swiper(elementGallerySwiper, {
+  // параметры
+  loop: false,
+  spaceBetween: 50,
+  slidesPerView: 3,
+  slidesPerGroup: 3,
+  effect: 'slide',
+  speed: 700,
+  navigation: {
+    nextEl: '.gallery__subblock--arrows .swiper-button-next',
+    prevEl: '.gallery__subblock--arrows .swiper-button-prev',
+  },
 
-    pagination: {
-      el: ".gallery__subblock--arrows .gallery__swiper-pagination",
-      type: 'fraction',
-    },
+  pagination: {
+    el: ".gallery__subblock--arrows .gallery__swiper-pagination",
+    type: 'fraction',
+  },
 
-    breakpoints: {
-      // when window width is >= 320px
-      320: {
-        slidesPerView: 1,
-        slidesPerGroup: 1,
-        spaceBetween: 20
-      },
-      // when window width is >= 767px
-      767: {
-        slidesPerView: 2,
-        slidesPerGroup: 2,
-        spaceBetween: 38
-      },
-      // when window width is >= 1551px
-      1551: {
-        slidesPerView: 3,
-        slidesPerGroup: 3,
-        spaceBetween: 50
-      }
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      spaceBetween: 20
+    },
+    // when window width is >= 767px
+    767: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 38
+    },
+    // when window width is >= 1551px
+    1551: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+      spaceBetween: 50
     }
-  });
+  }
+});
 
 
 // catalog-accordion-------------------------------------------------------------------------------------------------------------
@@ -157,61 +157,57 @@ document.querySelectorAll('.catalog__button--panel--list').forEach(function (cat
 
 // events-swiper--------------------------------------------------------------------------------------------------------------------------------
 const elementEventsSwiper = document.querySelector('.events__block');
-let eventsSwiper;
 
-function initEventsSwiper() {
-  eventsSwiper = new Swiper(elementEventsSwiper, {
-    // параметры
-    loop: false,
-    spaceBetween: 50,
-    slidesPerView: 3,
-    slidesPerGroup: 3,
-    effect: 'slide',
-    speed: 700,
-    navigation: {
-      nextEl: '.events__container .swiper-button-next',
-      prevEl: '.events__container .swiper-button-prev',
+const eventsSwiper = new Swiper(elementEventsSwiper, {
+  // параметры
+  loop: false,
+  spaceBetween: 50,
+  slidesPerView: 3,
+  slidesPerGroup: 3,
+  effect: 'slide',
+  speed: 700,
+  navigation: {
+    nextEl: '.events__container .swiper-button-next',
+    prevEl: '.events__container .swiper-button-prev',
+  },
+  pagination: {
+    el: ".events__container .swiper-pagination",
+    clickable: true,
+  },
+
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      spaceBetween: 20
     },
-    pagination: {
-      el: ".events__container .swiper-pagination",
-      clickable: true,
+    // when window width is >= 767x
+    767: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 35
     },
-  });
-}
-
-function updateEventsSwiper() {
-  if (window.innerWidth <= 1023) {
-    eventsSwiper.params.slidesPerView = 2;
-    eventsSwiper.params.slidesPerGroup = 2;
-    eventsSwiper.params.spaceBetween = 35;
-  } else {
-    eventsSwiper.params.slidesPerView = 3;
-    eventsSwiper.params.slidesPerGroup = 3;
-    eventsSwiper.params.spaceBetween = 50;
+     // when window width is >= 1023x
+     1023: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+      spaceBetween: 27
+    },
+    // when window width is >= 1551px
+    1551: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+      spaceBetween: 50
+    }
   }
-
-  if (window.innerWidth <= 1550) {
-    eventsSwiper.params.spaceBetween = 27;
-  } else {
-    eventsSwiper.params.spaceBetween = 50;
-  }
-
-  eventsSwiper.update(); // Обновление Swiper с новыми параметрами
-}
-
-initEventsSwiper(); // Инициализация Swiper при загрузке страницы
-updateEventsSwiper(); // Обновление Swiper при загрузке страницы
-
-window.addEventListener('resize', updateEventsSwiper); // Обновление Swiper при изменении размера окна
-
+});
 
 
 // projects-swiper---------------------------------------------------------------------------------------------------------------------------------------
 const elementProjectsSwiper = document.querySelector('.projects__swiper');
-let projectsSwiper;
 
-function initProjectsSwiper() {
-  projectsSwiper = new Swiper(elementProjectsSwiper, {
+  const projectsSwiper = new Swiper(elementProjectsSwiper, {
     // параметры
     loop: true,
     spaceBetween: 50,
@@ -227,33 +223,34 @@ function initProjectsSwiper() {
       delay: 3000,
       disableOnInteraction: false,
     },
+
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        spaceBetween: 20
+      },
+      // when window width is >= 767x
+      767: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        spaceBetween: 34
+      },
+       // when window width is >= 1023x
+       1023: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        spaceBetween: 50
+      },
+      // when window width is >= 1551px
+      1551: {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+        spaceBetween: 50
+      }
+    }
   });
-}
-
-function updateProjectsSwiper() {
-  if (window.innerWidth <= 1550) {
-    projectsSwiper.params.slidesPerView = 2;
-    projectsSwiper.params.slidesPerGroup = 2;
-    projectsSwiper.params.spaceBetween = 50;
-  } else {
-    projectsSwiper.params.slidesPerView = 3;
-    projectsSwiper.params.slidesPerGroup = 3;
-    projectsSwiper.params.spaceBetween = 50;
-  }
-
-  if (window.innerWidth <= 1023) {
-    projectsSwiper.params.spaceBetween = 34;
-  } else {
-    projectsSwiper.params.spaceBetween = 50;
-  }
-
-  projectsSwiper.update(); // Обновление Swiper с новыми параметрами
-}
-
-initProjectsSwiper(); // Инициализация Swiper при загрузке страницы
-updateProjectsSwiper(); // Обновление Swiper при загрузке страницы
-
-window.addEventListener('resize', updateProjectsSwiper); // Обновление Swiper при изменении размера окна
 
 
 // footer-contact-form---------------------------------------------------------------------------------------------------------------

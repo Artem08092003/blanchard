@@ -316,6 +316,12 @@
   }
 }
 
+@media (max-width: 767px) {
+  .events__container .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: -34px;
+  }
+}
+
 /* projects-swiper */
 .projects__swiper--container {
   position: relative;

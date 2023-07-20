@@ -6,7 +6,7 @@
 #myMap-1 .ymaps-2-1-79-controls__control {
   inset: 250px 10px auto auto !important;
   border-radius: 5px !important;
-  box-shadow: 0 1px 2px 1px rgba(0,0,0,.15), 0 2px 5px -3px rgba(0,0,0,.15) !important;
+  box-shadow: 0 1px 2px 1px rgba(0, 0, 0, .15), 0 2px 5px -3px rgba(0, 0, 0, .15) !important;
   overflow: hidden !important;
 }
 
@@ -33,10 +33,24 @@
   margin-top: 310px !important;
   border-radius: 5px;
   overflow: hidden;
-  box-shadow: 0 1px 2px 1px rgba(0,0,0,.15), 0 2px 5px -3px rgba(0,0,0,.15) !important;
+  box-shadow: 0 1px 2px 1px rgba(0, 0, 0, .15), 0 2px 5px -3px rgba(0, 0, 0, .15) !important;
 }
 
 #myMap-1 .ymaps-2-1-79-map-copyrights-promo,
 #myMap-1 .ymaps-2-1-79-copyright__wrap {
   display: none;
+}
+
+@media (max-width: 767px) {
+  #myMap-1 .ymaps-2-1-79-map {
+    height: 320px !important;
+  }
+
+  #myMap-1 .ymaps-2-1-79-controls__control {
+    inset: 120px 10px auto auto !important;
+  }
+
+  #myMap-1 .ymaps-2-1-79-controls__control_toolbar {
+    margin-top: 180px !important;
+  }
 }
