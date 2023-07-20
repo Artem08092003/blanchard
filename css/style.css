@@ -39,7 +39,6 @@ body {
   min-width: 320px;
   font-family: 'OpenSans', sans-serif;
   font-weight: 400;
-  overflow-x: hidden;
 }
 
 .list--reset {
@@ -2168,10 +2167,12 @@ time {
   .header__btn--login {
     left: initial;
     right: 50px;
-    transform: translateX(150%);
+    visibility: hidden;
+    transform: translateY(200%);
   }
 
   .header__btn--login--active {
+    visibility: visible;
     transform: none;
   }
 }
@@ -2414,7 +2415,7 @@ time {
   .header__btn--login {
     left: 15px;
     bottom: 25px;
-    max-width: 150px;
+    max-width: 125px;
     padding: 15px 35px;
     text-align: center;
   }
@@ -2731,5 +2732,59 @@ time {
   .footer__social--link--bottom svg {
     width: 50px;
     height: 50px;
+  }
+
+  @media (max-height: 550px) {
+
+    /* header */
+    .header__btn--login {
+      left: 15px;
+      right: auto;
+      visibility: hidden;
+      transform: translateX(-150%);
+    }
+
+    .header__btn--login--active {
+      visibility: visible;
+      transform: none;
+    }
+  }
+
+  @media (max-height: 450px) {
+
+    /* header */
+    .header__stop--scroll {
+      overflow: hidden;
+    }
+
+    .header__nav {
+      height: 100vh;
+    }
+  }
+
+  @media (max-height: 350px) {
+    .header__btn--login {
+      left: auto;
+      right: 15px;
+      transform: translateY(200%);
+      visibility: hidden;
+    }
+
+    .header__btn--login--active {
+      visibility: visible;
+      transform: none;
+    }
+  }
+
+  @media (max-height: 350px) {
+
+    /* header */
+    .header__stop--scroll {
+      overflow: auto;
+    }
+
+    .header__nav {
+      height: 100vh;
+    }
   }
 }
