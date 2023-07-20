@@ -1967,6 +1967,7 @@ time {
     border: none;
     width: 218px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.85);
+    border-radius: 0%;
     color: var(--ellipse-20-color);
     font-weight: 400;
     font-size: 18px;
@@ -2412,7 +2413,9 @@ time {
   .header__btn--login {
     left: 15px;
     bottom: 25px;
+    max-width: 150px;
     padding: 15px 35px;
+    text-align: center;
   }
 
   .header__btn--login:hover {
@@ -2689,6 +2692,10 @@ time {
   .footer__btn {
     padding: 11px 34px;
     font-size: 12px;
+  }
+
+  .footer__btn:active {
+    padding: 10px 33px;
   }
 
   .footer__btn--span--none {
