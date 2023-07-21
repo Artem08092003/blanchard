@@ -125,7 +125,8 @@ new Accordion('.catalog__accordion--container', {
   elementClass: 'catalog__accordion--content',
   triggerClass: 'catalog__accordion--trigger',
   panelClass: 'catalog__accordion--panel',
-  activeClass: 'catalog__accordion--active'
+  activeClass: 'catalog__accordion--active',
+  openOnInit: [0]
 });
 
 

@@ -330,7 +330,8 @@
 .projects__swiper-button-prev,
 .projects__swiper-button-next {
   position: absolute;
-  top: 56%;
+  top: 40%;
+  margin: 0;
   width: 30px;
   height: 30px;
   border: 2px solid var(--ellipse-26-color);
@@ -389,4 +390,11 @@
   transform: rotate(45deg);
   border-right: 1px solid var(--ellipse-16-color);
   border-top: 1px solid var(--ellipse-16-color);
+}
+
+@media (max-width: 767px) {
+  .projects__swiper-button-prev,
+  .projects__swiper-button-next {
+    top: 27%;
+  }
 }

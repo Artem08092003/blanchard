@@ -1010,6 +1010,23 @@ time {
   margin: 25px 0;
 }
 
+.catalog__accordion--active .catalog__container--list .catalog__btn--list {
+  border-color: var(--ellipse-18-color);
+}
+
+.catalog__accordion--active .catalog__container--list .catalog__btn--list .catalog__h3--list  {
+  color: var(--ellipse-18-color);
+}
+
+.catalog__accordion--active .catalog__container--list .catalog__btn--list .catalog__svg--container--list svg path {
+  fill: var(--ellipse-30-color);
+}
+
+.catalog__accordion--active .catalog__container--list .catalog__btn--list .catalog__svg--container--list svg {
+  border: 2px solid var(--ellipse-19-color);
+  border-radius: 100%;
+}
+
 .catalog__list--panel {
   width: 100%;
   column-count: 3;
