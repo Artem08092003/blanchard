@@ -371,10 +371,10 @@
 .projects__swiper-button-prev::after {
   content: '';
   position: absolute;
-  left: 10px;
-  right: 10px;
-  top: 10px;
-  bottom: 10px;
+  left: 9px;
+  right: 9px;
+  top: 9px;
+  bottom: 9px;
   transform: rotate(45deg);
   border-left: 1px solid var(--ellipse-16-color);
   border-bottom: 1px solid var(--ellipse-16-color);
@@ -383,10 +383,10 @@
 .projects__swiper-button-next::after {
   content: '';
   position: absolute;
-  left: 10px;
-  right: 10px;
-  top: 10px;
-  bottom: 10px;
+  left: 9px;
+  right: 9px;
+  top: 9px;
+  bottom: 9px;
   transform: rotate(45deg);
   border-right: 1px solid var(--ellipse-16-color);
   border-top: 1px solid var(--ellipse-16-color);
