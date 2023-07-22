@@ -334,6 +334,7 @@
   margin: 0;
   width: 30px;
   height: 30px;
+  padding: 0;
   border: 2px solid var(--ellipse-26-color);
   border-radius: 100%;
   background-color: var(--ellipse-26-color);
@@ -371,10 +372,10 @@
 .projects__swiper-button-prev::after {
   content: '';
   position: absolute;
-  left: 9px;
-  right: 9px;
-  top: 9px;
-  bottom: 9px;
+  left: 10px;
+  right: 10px;
+  top: 10px;
+  bottom: 10px;
   transform: rotate(45deg);
   border-left: 1px solid var(--ellipse-16-color);
   border-bottom: 1px solid var(--ellipse-16-color);
@@ -383,10 +384,10 @@
 .projects__swiper-button-next::after {
   content: '';
   position: absolute;
-  left: 9px;
-  right: 9px;
-  top: 9px;
-  bottom: 9px;
+  left: 10px;
+  right: 10px;
+  top: 10px;
+  bottom: 10px;
   transform: rotate(45deg);
   border-right: 1px solid var(--ellipse-16-color);
   border-top: 1px solid var(--ellipse-16-color);
