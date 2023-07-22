@@ -189,8 +189,8 @@ const eventsSwiper = new Swiper(elementEventsSwiper, {
       slidesPerGroup: 2,
       spaceBetween: 35
     },
-     // when window width is >= 1023x
-     1023: {
+    // when window width is >= 1023x
+    1023: {
       slidesPerView: 3,
       slidesPerGroup: 3,
       spaceBetween: 27
@@ -208,50 +208,50 @@ const eventsSwiper = new Swiper(elementEventsSwiper, {
 // projects-swiper---------------------------------------------------------------------------------------------------------------------------------------
 const elementProjectsSwiper = document.querySelector('.projects__swiper');
 
-  const projectsSwiper = new Swiper(elementProjectsSwiper, {
-    // параметры
-    loop: true,
-    spaceBetween: 50,
-    slidesPerView: 3,
-    slidesPerGroup: 3,
-    effect: 'slide',
-    speed: 700,
-    navigation: {
-      nextEl: '.projects__swiper-button-next',
-      prevEl: '.projects__swiper-button-prev',
-    },
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
+const projectsSwiper = new Swiper(elementProjectsSwiper, {
+  // параметры
+  loop: true,
+  spaceBetween: 50,
+  slidesPerView: 3,
+  slidesPerGroup: 3,
+  effect: 'slide',
+  speed: 700,
+  navigation: {
+    nextEl: '.projects__swiper-button-next',
+    prevEl: '.projects__swiper-button-prev',
+  },
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
 
-    breakpoints: {
-      // when window width is >= 320px
-      320: {
-        slidesPerView: 1,
-        slidesPerGroup: 1,
-        spaceBetween: 20
-      },
-      // when window width is >= 767x
-      767: {
-        slidesPerView: 2,
-        slidesPerGroup: 2,
-        spaceBetween: 34
-      },
-       // when window width is >= 1023x
-       1023: {
-        slidesPerView: 2,
-        slidesPerGroup: 2,
-        spaceBetween: 50
-      },
-      // when window width is >= 1551px
-      1551: {
-        slidesPerView: 3,
-        slidesPerGroup: 3,
-        spaceBetween: 50
-      }
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      spaceBetween: 20
+    },
+    // when window width is >= 767x
+    767: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 34
+    },
+    // when window width is >= 1023x
+    1023: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 50
+    },
+    // when window width is >= 1551px
+    1551: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+      spaceBetween: 50
     }
-  });
+  }
+});
 
 
 // footer-contact-form---------------------------------------------------------------------------------------------------------------
@@ -390,4 +390,18 @@ headerSearchBtnOpen.addEventListener('click', function (el) {
 headerSearchBtnClose.addEventListener('click', function () {
   headerSearchForm.classList.remove('header__container--search--top--active');
   headerSearchBtnOpen.classList.remove('header__form--search--close--top')
+});
+
+
+// aria-label for swiper btn-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+var nextButtons = document.querySelectorAll('.swiper-button-next');
+var prevButtons = document.querySelectorAll('.swiper-button-prev');
+
+// Устанавливаем aria-label для всех кнопок навигации
+nextButtons.forEach(function (button) {
+  button.setAttribute('aria-label', 'Следующий слайд');
+});
+
+prevButtons.forEach(function (button) {
+  button.setAttribute('aria-label', 'Предыдущий слайд');
 });

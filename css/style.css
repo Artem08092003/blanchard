@@ -937,7 +937,8 @@ time {
   transition: color 0.2s, background 0.2s;
 }
 
-.catalog__btn--list.focus-visible .catalog__h3--list {
+.catalog__btn--list.focus-visible .catalog__h3--list,
+.catalog__accordion--active .catalog__container--list .catalog__btn--list.focus-visible .catalog__h3--list {
   outline: none;
   color: var(--ellipse-20-color);
   background-color: var(--ellipse-19-color);
