@@ -132,26 +132,35 @@ new Accordion('.catalog__accordion--container', {
 
 // catalog-tabs-------------------------------------------------------------------------------------------------------------------------
 document.querySelectorAll('.catalog__button--panel--list').forEach(function (catalogTabsBtn) {
-
   catalogTabsBtn.addEventListener('click', function (e) {
-
     const path = e.currentTarget.dataset.path;
 
     document.querySelectorAll('.catalog__button--panel--list').forEach(function (btn) {
-
-      btn.classList.remove('catalog__button--panel--list--active')
+      btn.classList.remove('catalog__button--panel--list--active');
     });
 
     e.currentTarget.classList.add('catalog__button--panel--list--active');
 
     document.querySelectorAll('.catalog__subblock--article').forEach(function (catalogContentRem) {
-      catalogContentRem.classList.remove('catalog__sublock--article--active')
+      catalogContentRem.classList.remove('catalog__sublock--article--active');
     });
 
     document.querySelectorAll(`[data-target-catalog="${path}"]`).forEach(function (catalogContentAdd) {
       catalogContentAdd.classList.add('catalog__sublock--article--active');
     });
 
+    // Находим элемент, до которого нужно прокрутить страницу
+    const catalogTargetElements = document.querySelectorAll(".catalog__subblock");
+
+    // Прокручиваем страницу до каждого элемента
+    catalogTargetElements.forEach(function (catalogTargetElement) {
+      const catalogTargetOffset = catalogTargetElement.offsetTop;
+
+      window.scrollTo({
+        top: catalogTargetOffset,
+        behavior: "smooth" // Добавляем плавную анимацию прокрутки
+      });
+    });
   });
 });
 
@@ -404,4 +413,30 @@ nextButtons.forEach(function (button) {
 
 prevButtons.forEach(function (button) {
   button.setAttribute('aria-label', 'Предыдущий слайд');
+});
+
+
+// // плавный листание ссылке на всех элементах -------------------------------------------------------------------------------------------------------------------------------------------
+window.addEventListener('DOMContentLoaded', function() {
+  // Добавляем обработчик клика на все ссылки на странице
+  const links = document.querySelectorAll('a');
+  links.forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      const href = this.getAttribute('href'); // Получаем значение атрибута href ссылки
+
+      // Проверяем, содержит ли ссылка символ #
+      if (href && href.indexOf('#') !== -1) {
+        e.preventDefault(); // Отменяем стандартное поведение перехода по ссылке
+
+        const targetId = href.slice(href.indexOf('#') + 1); // Получаем идентификатор якоря
+
+        // Плавно прокручиваем страницу до элемента с соответствующим идентификатором
+        document.getElementById(targetId).scrollIntoView({
+          behavior: 'smooth'
+        });
+      } else {
+        window.location.href = href;
+      }
+    });
+  });
 });

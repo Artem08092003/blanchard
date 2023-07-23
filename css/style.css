@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth; /*Добавляем плавную прокрутку для всех якорных ссылок */
 }
 
 *,
