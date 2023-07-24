@@ -570,7 +570,7 @@ time {
   font-size: 18px;
   font-weight: 700;
   color: var(--ellipse-20-color);
-  transition: background 0.2s ease-in-out, border 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out, border 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
 .hero__btn.focus-visible {
@@ -1426,7 +1426,7 @@ time {
   height: 150px;
   border: 1px solid var(--ellipse-25-color);
   cursor: pointer;
-  transition: border 0.2s;
+  transition: border 0.2s, transform 0.2s;
 }
 
 .projects__item--link.focus-visible {
