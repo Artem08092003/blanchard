@@ -417,11 +417,11 @@ prevButtons.forEach(function (button) {
 
 
 // // плавный листание ссылке на всех элементах -------------------------------------------------------------------------------------------------------------------------------------------
-window.addEventListener('DOMContentLoaded', function() {
+window.addEventListener('DOMContentLoaded', function () {
   // Добавляем обработчик клика на все ссылки на странице
   const links = document.querySelectorAll('a');
-  links.forEach(function(link) {
-    link.addEventListener('click', function(e) {
+  links.forEach(function (link) {
+    link.addEventListener('click', function (e) {
       const href = this.getAttribute('href'); // Получаем значение атрибута href ссылки
 
       // Проверяем, содержит ли ссылка символ #
@@ -438,5 +438,41 @@ window.addEventListener('DOMContentLoaded', function() {
         window.location.href = href;
       }
     });
+  });
+});
+
+
+// gallery modal window-----------------------------------------------------------------------------------------------------------------------------------------------
+const galleryModalWindowList = document.querySelectorAll('.gallery__list--modal--window');
+const galleryLinkPictures = document.querySelectorAll('.gallery__link--pictures');
+const galleryModalWindowBtnClose = document.querySelectorAll('.gallery__close--modal--window');
+
+galleryLinkPictures.forEach(function (galleryLink) {
+  galleryLink.addEventListener('click', function (el) {
+    const modalIndex = parseInt(galleryLink.dataset.modalIndex);
+    let isAnyWindowActive = false; // Флаг для отслеживания активного окна
+    galleryModalWindowList.forEach(function (modalWindow) {
+      const windowIndex = parseInt(modalWindow.dataset.modalIndex);
+      if (windowIndex === modalIndex) {
+        modalWindow.classList.add('gallery__list--modal--window--active');
+        isAnyWindowActive = true; // Устанавливаем флаг в true, если окно активно
+      } else {
+        modalWindow.classList.remove('gallery__list--modal--window--active');
+      }
+    });
+    if (isAnyWindowActive) {
+      document.body.classList.add('gallery__modal--window--stop--scroll');
+    } else {
+      document.body.classList.remove('gallery__modal--window--stop--scroll');
+    }
+  });
+});
+
+galleryModalWindowBtnClose.forEach(function (btnClose) {
+  btnClose.addEventListener('click', function () {
+    galleryModalWindowList.forEach(function (modalWindow) {
+      modalWindow.classList.remove('gallery__list--modal--window--active');
+    });
+    document.body.classList.remove('gallery__modal--window--stop--scroll');
   });
 });

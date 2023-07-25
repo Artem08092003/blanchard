@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
   <link rel="stylesheet" href="css/scrollbar.css">
   <link rel="stylesheet" href="css/tooltip.css">
+  <link rel="stylesheet" href="css/modal-window.css">
   <link rel="stylesheet" href="css/style.css">
   <style>
     /**
@@ -412,7 +413,7 @@
           </div>
           <div class=" swiper-wrapper gallery__subblock--pictures">
             <div class="swiper-slide swiper-slide-1">
-              <a href="#" class="gallery__link--pictures">
+              <a href="#" class="gallery__link--pictures" data-modal-index="1">
                 <picture>
                   <source media="(max-width: 767px)" srcset="img/gallery-1(320px).png">
                   <source media="(max-width: 1023px)" srcset="img/gallery-1(768px).png">
@@ -422,7 +423,7 @@
               </a>
             </div>
             <div class="swiper-slide swiper-slide-2">
-              <a href="#" class="gallery__link--pictures">
+              <a href="#" class="gallery__link--pictures" data-modal-index="2">
                 <picture>
                   <source media="(max-width: 767px)" srcset="img/gallery-2(320px).png">
                   <source media="(max-width: 1023px)" srcset="img/gallery-2(768px).png">
@@ -432,7 +433,7 @@
               </a>
             </div>
             <div class="swiper-slide swiper-slide-3">
-              <a href="#" class="gallery__link--pictures">
+              <a href="#" class="gallery__link--pictures" data-modal-index="3">
                 <picture>
                   <source media="(max-width: 767px)" srcset="img/gallery-3(320px).png">
                   <source media="(max-width: 1023px)" srcset="img/gallery-3(768px).png">
@@ -442,7 +443,7 @@
               </a>
             </div>
             <div class="swiper-slide swiper-slide-4">
-              <a href="#" class="gallery__link--pictures">
+              <a href="#" class="gallery__link--pictures" data-modal-index="4">
                 <picture>
                   <source media="(max-width: 767px)" srcset="img/gallery-4(320px).png">
                   <source media="(max-width: 1023px)" srcset="img/gallery-4(768px).png">
@@ -452,7 +453,7 @@
               </a>
             </div>
             <div class="swiper-slide swiper-slide-5">
-              <a href="#" class="gallery__link--pictures">
+              <a href="#" class="gallery__link--pictures" data-modal-index="5">
                 <picture>
                   <source media="(max-width: 767px)" srcset="img/gallery-5(320px).png">
                   <source media="(max-width: 1023px)" srcset="img/gallery-5(768px).png">
@@ -462,7 +463,7 @@
               </a>
             </div>
             <div class="swiper-slide swiper-slide-6">
-              <a href="#" class="gallery__link--pictures">
+              <a href="#" class="gallery__link--pictures" data-modal-index="6">
                 <picture>
                   <source media="(max-width: 1023px)" srcset="img/gallery-6(768px).png">
                   <source media="(max-width: 1551px)" srcset="img/gallery-6(1024px).png">
@@ -472,6 +473,205 @@
             </div>
           </div>
         </div>
+        <ul class="list--reset list gallery__list--modal--window flex" data-modal-index="2">
+          <li class="gallery__item--modal--window">
+            <button class="btn--reset btn hvr-grow gallery__close--modal--window" aria-label="закрыть модальное окно">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0.666641 15.3043L15.3333 3.17761e-05L16 0.695679L1.33331 15.9999L0.666641 15.3043Z" fill="none" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0.666725 -2.96187e-06L15.3334 15.3042L14.6667 15.9999L5.76143e-05 0.695644L0.666725 -2.96187e-06Z"
+                  fill="none" />
+              </svg>
+            </button>
+            <article class="flex gallery__article--modal--window">
+              <img src="img/gallery-modal-window-2.png"
+                alt="картина от Казимир Малевич называется «Женщина с граблями»">
+              <div class="gallery__article--subblock--modal--window flex">
+                <h3 class="h3 gallery__h3--modal--window">
+                  Казимир Малевич
+                </h3>
+                <span class="gallery__article--span--name--modal--window">
+                  «Женщина с граблями»
+                </span>
+                <div class="gallery__time--block--modal--window">
+                  <time datetime="1931" class="gallery__time--modal--window">1931</time>
+                  <time datetime="1932" class="gallery__time--modal--window">-1932</time>
+                </div>
+                <p class="descr gallery__descr--modal--window">
+                  Картина из второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за её создание
+                  в 1930–1931 годах, после того, как первый цикл был утерян после Берлинской и Варшавской выставок
+                  в 1927 году.
+                </p>
+              </div>
+            </article>
+          </li>
+        </ul>
+        <ul class="list--reset list gallery__list--modal--window flex" data-modal-index="1">
+          <li class="gallery__item--modal--window">
+            <button class="btn--reset btn hvr-grow gallery__close--modal--window" aria-label="закрыть модальное окно">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0.666641 15.3043L15.3333 3.17761e-05L16 0.695679L1.33331 15.9999L0.666641 15.3043Z" fill="none" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0.666725 -2.96187e-06L15.3334 15.3042L14.6667 15.9999L5.76143e-05 0.695644L0.666725 -2.96187e-06Z"
+                  fill="none" />
+              </svg>
+            </button>
+            <article class="flex gallery__article--modal--window">
+              <img src="img/gallery-1(320px).png" alt="картина от Малевич Казимир Северинович. называется Торс">
+              <div class="gallery__article--subblock--modal--window flex">
+                <h3 class="h3 gallery__h3--modal--window">
+                  Казимир Малевич
+                </h3>
+                <span class="gallery__article--span--name--modal--window">
+                  «Торс»
+                </span>
+                <div class="gallery__time--block--modal--window">
+                  <time datetime="1929" class="gallery__time--modal--window">1929</time>
+                  <time datetime="1929" class="gallery__time--modal--window">-1929</time>
+                </div>
+                <p class="descr gallery__descr--modal--window">
+                  В 20-х годах Малевич пишет серии картин с крестьянами. Люди без лиц, разделенные на две половины по
+                  цветам. Для меня это тоже загадка Малевича. В основном все пишут о Квадрате и супрематизме, то есть о
+                  беспредметной живописи. А вот эти крестьяне – это что? Возвращение к фигуративной живописи? Или
+                  все-таки попытка дальнейшего создания нового мира, создания человека из простейших форм? Я голосую за
+                  второе, но я не искусствовед.
+                </p>
+              </div>
+            </article>
+          </li>
+        </ul>
+        <ul class="list--reset list gallery__list--modal--window flex" data-modal-index="3">
+          <li class="gallery__item--modal--window">
+            <button class="btn--reset btn hvr-grow gallery__close--modal--window" aria-label="закрыть модальное окно">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0.666641 15.3043L15.3333 3.17761e-05L16 0.695679L1.33331 15.9999L0.666641 15.3043Z" fill="none" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0.666725 -2.96187e-06L15.3334 15.3042L14.6667 15.9999L5.76143e-05 0.695644L0.666725 -2.96187e-06Z"
+                  fill="none" />
+              </svg>
+            </button>
+            <article class="flex gallery__article--modal--window">
+              <img src="img/gallery-3.png" alt="картина от Малевич Казимир Северинович. называется «Уборка ржи»">
+              <div class="gallery__article--subblock--modal--window flex">
+                <h3 class="h3 gallery__h3--modal--window">
+                  Казимир Малевич
+                </h3>
+                <span class="gallery__article--span--name--modal--window">
+                  «Уборка ржи»
+                </span>
+                <div class="gallery__time--block--modal--window">
+                  <time datetime="1929" class="gallery__time--modal--window">1929</time>
+                  <time datetime="1929" class="gallery__time--modal--window">-1929</time>
+                </div>
+                <p class="descr gallery__descr--modal--window">
+                  «Уборка ржи» — это образчик российского кубофутуризма, взявшего начало у французских мастеров. Работа
+                  относится к крестьянской серии картин, запечатлевшей рутинный уклад сельской жизни.
+                </p>
+              </div>
+            </article>
+          </li>
+        </ul>
+        <ul class="list--reset list gallery__list--modal--window flex" data-modal-index="4">
+          <li class="gallery__item--modal--window">
+            <button class="btn--reset btn hvr-grow gallery__close--modal--window" aria-label="закрыть модальное окно">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0.666641 15.3043L15.3333 3.17761e-05L16 0.695679L1.33331 15.9999L0.666641 15.3043Z" fill="none" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0.666725 -2.96187e-06L15.3334 15.3042L14.6667 15.9999L5.76143e-05 0.695644L0.666725 -2.96187e-06Z"
+                  fill="none" />
+              </svg>
+            </button>
+            <article class="flex gallery__article--modal--window">
+              <img src="img/gallery-4.png" alt="картина от Иван Клюн. называется «Супрематизм»">
+              <div class="gallery__article--subblock--modal--window flex">
+                <h3 class="h3 gallery__h3--modal--window">
+                  Иван Клюн
+                </h3>
+                <span class="gallery__article--span--name--modal--window">
+                  «Супрематизм»
+                </span>
+                <div class="gallery__time--block--modal--window">
+                  <time datetime="1935" class="gallery__time--modal--window">1935</time>
+                  <time datetime="1936" class="gallery__time--modal--window">-1936</time>
+                </div>
+                <p class="descr gallery__descr--modal--window">
+                  Иван Васильевич Клюн — одна из ключевых фигур русского авангарда 1910–1920-х годов. Друг и соратник
+                  К.С. Малевича, самобытный художник и исследователь, он внес существенный вклад в формирование
+                  беспредметного искусства и был ревностным приверженцем и пропагандистом супрематизма.
+                </p>
+              </div>
+            </article>
+          </li>
+        </ul>
+        <ul class="list--reset list gallery__list--modal--window flex" data-modal-index="5">
+          <li class="gallery__item--modal--window">
+            <button class="btn--reset btn hvr-grow gallery__close--modal--window" aria-label="закрыть модальное окно">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0.666641 15.3043L15.3333 3.17761e-05L16 0.695679L1.33331 15.9999L0.666641 15.3043Z" fill="none" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0.666725 -2.96187e-06L15.3334 15.3042L14.6667 15.9999L5.76143e-05 0.695644L0.666725 -2.96187e-06Z"
+                  fill="none" />
+              </svg>
+            </button>
+            <article class="flex gallery__article--modal--window">
+              <img src="img/gallery-5.png" alt="картина от Казимир Малевич. называется «Женщина с ведрами»">
+              <div class="gallery__article--subblock--modal--window flex">
+                <h3 class="h3 gallery__h3--modal--window">
+                  Казимир Малевич
+                </h3>
+                <span class="gallery__article--span--name--modal--window">
+                  «Женщина с ведрами»
+                </span>
+                <div class="gallery__time--block--modal--window">
+                  <time datetime="1912" class="gallery__time--modal--window">1912</time>
+                  <time datetime="1912" class="gallery__time--modal--window">-1912</time>
+                </div>
+                <p class="descr gallery__descr--modal--window">
+                  В произведении еще более последовательно выражено устремление художника к установлению однородных
+                  элементов формы (в данном случае конусообразных) как некоего строительного материала. Граница
+                  беспредметности еще более приблизилась — сюжет и предмет почти исчезли.
+                </p>
+              </div>
+            </article>
+          </li>
+        </ul>
+        <ul class="list--reset list gallery__list--modal--window flex" data-modal-index="6">
+          <li class="gallery__item--modal--window">
+            <button class="btn--reset btn hvr-grow gallery__close--modal--window" aria-label="закрыть модальное окно">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0.666641 15.3043L15.3333 3.17761e-05L16 0.695679L1.33331 15.9999L0.666641 15.3043Z" fill="none" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0.666725 -2.96187e-06L15.3334 15.3042L14.6667 15.9999L5.76143e-05 0.695644L0.666725 -2.96187e-06Z"
+                  fill="none" />
+              </svg>
+            </button>
+            <article class="flex gallery__article--modal--window">
+              <img src="img/gallery-6.png" alt="картина от Казимир Малевич. называется «Супрематизм»">
+              <div class="gallery__article--subblock--modal--window flex">
+                <h3 class="h3 gallery__h3--modal--window">
+                  Казимир Малевич
+                </h3>
+                <span class="gallery__article--span--name--modal--window">
+                  «Супрематизм»
+                </span>
+                <div class="gallery__time--block--modal--window">
+                  <time datetime="1915" class="gallery__time--modal--window">1915</time>
+                  <time datetime="1915" class="gallery__time--modal--window">-1915</time>
+                </div>
+                <p class="descr gallery__descr--modal--window">
+                  Изобретённый Казимиром Малевичем термин «супрематизм» восходил к латинскому Supremus, означавшему
+                  превосходную степень чего-либо.
+                </p>
+              </div>
+            </article>
+          </li>
+        </ul>
       </div>
     </section>
 
